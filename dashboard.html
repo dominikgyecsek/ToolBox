@@ -5,6 +5,9 @@
 	<title>Dashboard</title>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 	<link rel="stylesheet" href="main.css">
+	<link rel="stylesheet" href="modules.css">
+	<link rel="stylesheet" href="calculator.css">
+	<link rel="stylesheet" href="jquery-ui.min.css">
 
 </head>
 <body>
@@ -19,25 +22,28 @@
 
 	<aside class="close">
 
-		<div class="module" id="calculator-add">Calculator</div>
-		<div class="module" id="sticky-add">Sticky Notes</div>
-		<div class="module" id="timer-add">Timer</div>
-		<div class="module" id="stopwatch-add">Stopwatch</div>
-		<div class="module" id="world-add">World Clock</div>
-		<div class="module" id="tracker-add">Time Tracker</div>
-		<div class="module" id="countdown-add">Countdown</div>
-		<div class="module" id="tally-add">Tally</div>
-		<div class="module" id="weather-add">Weather</div>
-		<div class="module" id="choice-add">Choice Wheel</div>
+		<div class="module" data-module="10" id="calculator-add">Calculator</div>
+		<div class="module" data-module="11" id="sticky-add">Sticky Notes</div>
+		<div class="module" data-module="12" id="timer-add">Timer</div>
+		<div class="module" data-module="13" id="stopwatch-add">Stopwatch</div>
+		<div class="module" data-module="14" id="world-add">World Clock</div>
+		<div class="module" data-module="15" id="tracker-add">Time Tracker</div>
+		<div class="module" data-module="16" id="countdown-add">Countdown</div>
+		<div class="module" data-module="17" id="tally-add">Tally</div>
+		<div class="module" data-module="18" id="weather-add">Weather</div>
+		<div class="module" data-module="19" id="choice-add">Choice Wheel</div>
 
 	</aside>
 
 </main>
 
 <script src="jquery-2.2.1.min.js"></script>
+<script src="jquery-ui.min.js"></script>
+
 <script src="interface.js"></script>
 <script src="modules.js"></script>
 <script src="event-listeners.js"></script>
+<script src="calculator.js"></script>
 
 </body>
 </html>
