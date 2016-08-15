@@ -73,3 +73,17 @@ nav i {
 	padding: 0px 10px 10px 10px;
 	cursor: pointer;
 }
+
+#aside-close {
+	width: calc(100% - 250px);
+	background-color: transparent;
+	height: calc(100% - 40px);
+	right: 0px;
+	position: absolute;
+	z-index: 1000;
+	display: none;
+}
+
+.hide {
+	display: none;
+}

@@ -58,6 +58,7 @@ Modules.prototype.add = function(moduleId) {
 
 		case 10:
 			calc.initialise();
+			
 			break;
 		default:
 			console.log("Not impr");

@@ -1,5 +1,6 @@
 .frame {
 	background-color: rgb(200, 200, 200);
+	border-radius: 8px;
 }
 
 .controllers {
@@ -20,4 +21,9 @@
 	color: white;
 	padding: 2px;
 	cursor: pointer;
+}
+
+.content {
+	overflow: hidden;
+	clear: both;
 }

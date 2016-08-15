@@ -9,10 +9,12 @@ Interface.prototype.openMenu = function() {
 		$("aside").removeClass("close");
 		$("aside").addClass("open");
 		$("#add-module>i").text("close");
+		$("#aside-close").show();
 	} else {
 		$("aside").removeClass("open");
 		$("aside").addClass("close");
-		$("#add-module>i").text("menu");		
+		$("#add-module>i").text("menu");
+		$("#aside-close").hide();		
 	}
 }
 
