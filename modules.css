@@ -1,3 +1,23 @@
 .frame {
 	background-color: rgb(200, 200, 200);
 }
+
+.controllers {
+	height: 20px;
+}
+
+.close-module {
+	/*border-radius: 100%;
+	background-color: #D21C2B;
+	font-size: 14px;*/
+	float: right;
+	/*height: 15px;
+	width: 15px;*/
+}
+
+.close-module>i {
+	font-size: 15px;
+	color: white;
+	padding: 2px;
+	cursor: pointer;
+}

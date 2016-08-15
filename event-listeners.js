@@ -9,4 +9,12 @@ $(document).ready(function() {
 		m.add(moduleId);
 	})
 
+	//$("#calculator-add").trigger("click");
+
+	$("html").on("click", ".close-module", function() {
+		var frame = $(this);
+		m.close(frame);
+	})
+
+
 })

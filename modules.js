@@ -1,7 +1,11 @@
 var Modules = function() {
+
 	this.controllers = "<div class='controllers'>\
-		controllers\
+		<span class='close-module'>\
+			<i class='material-icons'>close</i>\
+		</span>\
 	</div>";
+
 	this.loaded = {
 		10: 0,
 		11: 0,
@@ -14,6 +18,7 @@ var Modules = function() {
 		18: 0,
 		19: 0
 	}
+
 	this.limit = {
 		10: 1,
 		11: 10,
@@ -26,6 +31,7 @@ var Modules = function() {
 		18: 10,
 		19: 1
 	}
+
 }
 
 Modules.prototype.initialize = function() {
@@ -63,8 +69,14 @@ Modules.prototype.add = function(moduleId) {
 
 }
 
-Modules.prototype.delete = function(moduleId) {
+Modules.prototype.close = function(frame) {
+
+	console.log(frame)
+	var moduleId = frame.parent().parent().attr("data-module")
 	console.log(moduleId)
+	this.loaded[moduleId] = this.loaded[moduleId] - 1;
+	$(frame).parent().parent().remove();
+
 }
 
 var m = new Modules();
