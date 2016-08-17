@@ -13,7 +13,7 @@ var Calculator = function() {
 					<span class='button fun'>/</span>\
 					<span class='button number'>7</span>\
 					<span class='button number'>8</span>\
-					<span class='button number'>9</span>\
+					<span class='button number' id='nine'>9</span>\
 					<span class='button fun'>C</span>\
 					<span class='button number'>4</span>\
 					<span class='button number'>5</span>\
@@ -104,8 +104,13 @@ Calculator.prototype.press = function($this) {
 
 	if ( $this.hasClass("number") ) {
 
-		screen += buttonContent;
-		$("#screen").text(screen);
+		if ( (buttonContent == ".") && (screen == "") ) {
+			screen = "0."
+		} else {
+			screen += buttonContent;
+					
+		}
+		$("#screen").text(screen);	
 
 	} else {
 		
@@ -117,19 +122,16 @@ Calculator.prototype.press = function($this) {
 				this.addToMemory();
 				break;
 			case "-":
-				
 				if (this.memory != 0) this.compute();
 				this.func = "-";
 				this.addToMemory();
 				break;
 			case "*":
-				
 				if (this.memory != 0) this.compute();
 				this.func = "*";
 				this.addToMemory();
 				break;
 			case "/":
-				
 				if (this.memory != 0) this.compute();
 				this.func = "/";
 				this.addToMemory();

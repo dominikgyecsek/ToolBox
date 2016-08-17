@@ -1,0 +1,82 @@
+.timer {
+	background-color: rgb(240,240,240);
+	width: 250px;
+	border-radius: 3px;
+	cursor: move;
+	overflow: hidden;
+}
+
+.timer>.content {
+	outline: 0px solid transparent;
+	padding: 0px 7px 5px 8px;
+	height: 120px;
+	overflow: scroll;
+	overflow: hidden;
+	height: 58px;
+}
+
+.timer-btn {
+	width: 50px;
+	height: 50px;
+	font-size: 14px;
+	border-radius: 100%;
+	float: left;
+}
+
+.start-pause-timer {
+
+}
+
+.stop-timer {
+
+}
+
+.timer-picker {
+	width: 135px;
+	float: left;
+	overflow-x:scroll; 
+}
+
+	.timer-section {
+		padding: 10px;
+		width: 67px;
+		float: left;
+		overflow-x:scroll; 
+		height: 72px;
+	}
+
+		.timer-hour {
+			overflow-x:scroll; 
+		}
+
+			.timer-hour>div {
+				width: 25px;
+			}
+
+		.timer-minute {
+			overflow-x:scroll; 
+		}
+
+			.timer-minute>div {
+				width: 25px;
+			}
+
+.timer-label {
+	position: fixed;
+    bottom: 30px;
+    left: 94px;
+}
+
+#timer-label-minute {
+	left: 158px;
+}
+
+.timer-layer {
+	background-color: rgba(0,0,0,0.08);
+	width: 120px;
+	height: 22px;
+	position: absolute;
+	border-radius: 4px;
+	top: 8px;
+	left: 65px;
+}

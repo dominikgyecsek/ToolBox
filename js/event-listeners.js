@@ -9,7 +9,7 @@ $(document).ready(function() {
 		m.add(moduleId);
 	})
 
-	$("#calculator-add").trigger("click");
+	$("#timer-add").trigger("click");
 	$("#add-module").trigger("click");
 
 	$("html").on("click", ".close-module", function() {

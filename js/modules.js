@@ -59,6 +59,12 @@ Modules.prototype.add = function(moduleId) {
 		case 10:
 			calc.initialise();
 			break;
+		case 11:
+			sticker.initialise(loaded);
+			break;
+		case 12:
+			timer.initialise(loaded);
+			break;
 		default:
 			console.log("Not implemented");
 			break;
