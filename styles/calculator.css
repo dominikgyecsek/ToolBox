@@ -1,0 +1,91 @@
+.frame.calculator {
+	width: 200px;
+}
+
+.calculator>.content {
+	height: 300px;
+}
+
+.calculator {
+	cursor: move;
+}
+
+.calculator .controllers {
+	background-color: #594F4F;
+	border-radius: 8px 8px 0px 0px;
+}
+
+.button {
+	width: 50px;
+	height: 50px;
+	float: left;
+	text-align: center;
+	padding-top: 15px;
+	cursor: pointer;
+}
+
+#screen {
+	height: 50px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+    color: white;
+    font-size: 28px;
+    text-align: right;
+    padding: 9px 15px;
+	background-color: #594F4F;
+	color: #E0E4CC;
+}
+
+#equal {
+	height: 100px;
+	padding-top: 40px;
+	border-radius: 0px 0px 5px 0px;
+}
+
+#point {
+	padding-right: 50px;
+	font-size: 30px;
+	bottom: 50px;
+	padding: 1px;
+}
+
+#zero {
+	width: 100px;
+	bottom: 50px;
+}
+
+#zero {
+	padding-right: 50px;
+	border-radius: 0px 0px 0px 5px;
+}
+
+.number {
+	background-color: #F38630;
+	color: #E0E4CC;
+}
+
+.fun {
+	background-color: #594F4F;
+	color: #E0E4CC;
+}
+
+.blink {
+	animation-name: blink;
+	animation-duration: 0.15s; 
+}
+
+@keyframes blink {
+	0% {
+		/*background-color: rgba(0,0,0,0);*/
+		opacity: 1;
+	}
+	50% {
+		/*background-color: rgba(0,0,0,0.1);*/
+		opacity: 0.7;
+	}
+	100% {
+		/*background-color: rgba(0,0,0,0);*/
+		opacity: 1;
+	}
+}

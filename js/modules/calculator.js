@@ -31,6 +31,8 @@ var Calculator = function() {
 	";
 
 	this.memory = 0;
+	this.func = null;
+
 
 }
 
@@ -43,12 +45,56 @@ Calculator.prototype.initialise = function() {
 
 }
 
+Calculator.prototype.compute = function() {
+
+	if ( this.func == null ) return;
+
+	console.log("Computing")
+	console.log("Mem: " + this.memory);
+	console.log("Screen: " + $("#screen").text());
+
+	var memory = parseFloat(this.memory);
+	var screen = parseFloat($("#screen").text());
+	var sum
+
+	switch (this.func) {
+
+		case "+":
+			sum = memory + screen;
+			break;
+		case "-":
+			sum = memory - screen;
+			break;
+		case "*":
+			sum = memory * screen;
+			break;
+		case "/":
+			sum = memory / screen;
+			break;
+
+	}
+
+	this.memory = sum;
+	$("#screen").text(sum);
+	console.log("--------");
+
+	this.func = null;
+
+}
+
+Calculator.prototype.addToMemory = function() {
+
+	this.memory = $("#screen").text();
+	$("#screen").text("0");
+
+}
+
 Calculator.prototype.press = function($this) {
 
 	$this.addClass("blink");
 	setTimeout(function() {
 		$this.removeClass("blink");
-	}, 200)
+	}, 150);
 
 	var screen = $("#screen").text();
 	if (screen == "0") screen = "";
@@ -62,40 +108,49 @@ Calculator.prototype.press = function($this) {
 		$("#screen").text(screen);
 
 	} else {
-
-		console.log(screen.length)
-		console.log(screen);
-
-		/*if ( isNaN(screen) )
-			return;*/
 		
 		switch (buttonContent) {
 
 			case "+":
-				console.log("ADD");
+				if (this.memory != 0) this.compute();
+				this.func = "+";
+				this.addToMemory();
 				break;
 			case "-":
-				console.log("SUB");
+				
+				if (this.memory != 0) this.compute();
+				this.func = "-";
+				this.addToMemory();
 				break;
 			case "*":
-				console.log("MUL");
+				
+				if (this.memory != 0) this.compute();
+				this.func = "*";
+				this.addToMemory();
 				break;
 			case "/":
-				console.log("DIV");
+				
+				if (this.memory != 0) this.compute();
+				this.func = "/";
+				this.addToMemory();
 				break;
 			case "+-":
-				console.log("INV");
+				if ( screen != 0 ) {
+					if ( screen[0] == "-" ) screen = screen.substr(1, screen.length);
+					else screen = "-" + screen;
+					$("#screen").text(screen);
+				}
 				break;
 			case "C":
-				console.log("RES");
+				this.memory = 0;
+				$("#screen").text(0);
 				break;
 			case "=":
-				console.log("EQL");
+				console.log(this.memory);
+				if (this.memory != 0) this.compute();
 				break;
 
 		}
-
-		console.log("Computation Done");
 
 	}
 
