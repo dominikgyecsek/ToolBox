@@ -58,10 +58,9 @@ Modules.prototype.add = function(moduleId) {
 
 		case 10:
 			calc.initialise();
-			
 			break;
 		default:
-			console.log("Not impr");
+			console.log("Not implemented");
 			break;
 
 	}
@@ -72,11 +71,12 @@ Modules.prototype.add = function(moduleId) {
 
 Modules.prototype.close = function(frame) {
 
-	console.log(frame)
 	var moduleId = frame.parent().parent().attr("data-module")
-	console.log(moduleId)
 	this.loaded[moduleId] = this.loaded[moduleId] - 1;
-	$(frame).parent().parent().remove();
+	$(frame).parent().parent().removeClass("open-module").addClass("close-module-anim");
+	setTimeout(function() {
+		$(frame).parent().parent().remove();
+	}, 300)
 
 }
 

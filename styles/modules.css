@@ -27,3 +27,25 @@
 	overflow: hidden;
 	clear: both;
 }
+
+.open-module {
+	animation-name: openModule;
+	animation-duration: 0.3s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes openModule {
+	0% { transform: scale(0.1); opacity: 0 }
+	100% { transform: scale(1); opacity: 1 }
+}
+
+.close-module-anim {
+	animation-name: closeModule;
+	animation-duration: 0.3s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes closeModule {
+	0% { transform: scale(1); opacity: 1 }
+	100% { transform: scale(0.1); opacity: 0 }
+}
