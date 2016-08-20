@@ -24,11 +24,11 @@
 }
 
 .start-pause-timer {
-
+	float: right;
 }
 
 .stop-timer {
-
+	z-index: 10;
 }
 
 .timer-picker {
@@ -79,4 +79,12 @@
 	border-radius: 4px;
 	top: 8px;
 	left: 65px;
+}
+
+
+.timer-remainder {
+	display: none;
+	position: absolute;
+	font-size: 26px;
+	padding: 7px 65px;
 }

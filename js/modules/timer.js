@@ -1,5 +1,7 @@
 var Timer = function() {
-
+	this.scrollTopMinute = 0;
+	this.scrollTopHour = 0;
+	this.hasTimer = false;
 }
 
 Timer.prototype.initialise = function(id) {
@@ -9,10 +11,11 @@ Timer.prototype.initialise = function(id) {
 			" + m.controllers + "\
 			<div class='content scrollbar-hide'>\
 				<div class='timer-layer'></div>\
-				<button class='start-pause-timer timer-btn'>Start</button>\
+				<button class='stop-timer timer-btn'>Stop</button>\
+				<div class='timer-remainder'></div>\
 				<div class='timer-picker'>\
-					<div class='timer-section scrollbar-hide'>\
-						<div class='timer-hour scrollbar-hide'>\
+					<div id='timer-hour' class='timer-section scrollbar-hide'>\
+						<div  class='timer-hour scrollbar-hide'>\
 							<div>0</div>\
 							<div>1</div>\
 							<div>2</div>\
@@ -41,7 +44,7 @@ Timer.prototype.initialise = function(id) {
 						</div>\
 						<div class='timer-label'>h</div>\
 					</div>\
-					<div class='timer-section scrollbar-hide'>\
+					<div id='timer-minute' class='timer-section scrollbar-hide'>\
 						<div class='timer-minute scrollbar-hide'>\
 							<div>0</div>\
 							<div>1</div>\
@@ -107,7 +110,7 @@ Timer.prototype.initialise = function(id) {
 						<div class='timer-label' id='timer-label-minute'>m</div>\
 					</div>\
 				</div>\
-				<button class='stop-timer timer-btn'>Start</button>\
+				<button class='start-pause-timer timer-btn'>Start</button>\
 			</div>\
 		</div>\
 	";
@@ -118,3 +121,5 @@ Timer.prototype.initialise = function(id) {
 }
 
 var timer = new Timer();
+
+console.log(timer.hasTimer);
