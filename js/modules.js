@@ -15,8 +15,6 @@ var Modules = function() {
 		15: 0,
 		16: 0,
 		17: 0,
-		18: 0,
-		19: 0
 	}
 
 	this.limit = {
@@ -28,8 +26,6 @@ var Modules = function() {
 		15: 10,
 		16: 10,
 		17: 10,
-		18: 10,
-		19: 1
 	}
 
 }
@@ -65,6 +61,9 @@ Modules.prototype.add = function(moduleId) {
 		case 12:
 			timer.initialise(loaded);
 			break;
+		case 17:
+			tally.create(loaded);
+			break;
 		default:
 			console.log("Not implemented");
 			break;
@@ -84,6 +83,10 @@ Modules.prototype.close = function(frame) {
 		$(frame).parent().parent().remove();
 	}, 300)
 
+}
+
+Modules.prototype.random = function(min, max) {
+	return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
 var m = new Modules();

@@ -9,8 +9,10 @@ $(document).ready(function() {
 		m.add(moduleId);
 	})
 
-	$("#timer-add").trigger("click");
-	$("#add-module").trigger("click");
+	//setTimeout(function() {
+		$("#tally-add").trigger("click");
+		$("#add-module").trigger("click");
+	//}, 300)
 
 	$("html").on("click", ".close-module", function() {
 		var frame = $(this);
@@ -114,7 +116,16 @@ $(document).ready(function() {
 		}
 	})
 
+	// Tally
+
+	$("html").on("click", ".tally-inc", function() {
+		tally.increase( $(this) );
+	})
+
+	$("html").on("click", ".tally-dec", function() {
+		tally.decrease( $(this) );
+	})
+
 })
 
-console.log(timer.hasTimer);
 var hasTimer = false;

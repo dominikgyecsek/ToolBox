@@ -104,3 +104,11 @@ button {
 .scrollbar-hide::-webkit-scrollbar {
 	width: 0px !important;
 }
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
