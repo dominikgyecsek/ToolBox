@@ -12,6 +12,8 @@
 	<link rel="stylesheet" href="styles/sticky.css">
 	<link rel="stylesheet" href="styles/calculator.css">
 	<link rel="stylesheet" href="styles/timer.css">
+	<link rel="stylesheet" href="styles/tracker.css">
+	<link rel="stylesheet" href="../ResponsiveCSS/tripod.css">
 
 </head>
 <body>
@@ -19,19 +21,30 @@
 <main>
 
 	<nav>
-		<span id="add-module"> 
+
+		<span id="add-module" class="show-s show-m"> 
 			<i class="material-icons">menu</i>	
 		</span>
+
+		<span class="nav-items-group show-l">
+			<span class="module" data-module="10">Calculator</span>
+			<span class="module" data-module="11">Sticky Notes</span>
+			<span class="module" data-module="12">Timer</span>
+			<span class="module" data-module="13">Time Tracker</span>
+			<span class="module" data-module="14">Countdown</span>
+			<span class="module" data-module="15">Tally</span>
+		</span>
+
 	</nav>
 
-	<aside class="close">
+	<aside class="close show-m show-s">
 
-		<div class="module" data-module="10" id="calculator-add">Calculator</div>
-		<div class="module" data-module="11" id="sticky-add">Sticky Notes</div>
-		<div class="module" data-module="12" id="timer-add">Timer</div>
-		<div class="module" data-module="13" id="tracker-add">Time Tracker</div>
-		<div class="module" data-module="14" id="countdown-add">Countdown</div>
-		<div class="module" data-module="15" id="tally-add">Tally</div>
+		<div class="module" data-module="10">Calculator</div>
+		<div class="module" data-module="11">Sticky Notes</div>
+		<div class="module" data-module="12">Timer</div>
+		<div class="module" data-module="13">Time Tracker</div>
+		<div class="module" data-module="14">Countdown</div>
+		<div class="module" data-module="15">Tally</div>
 
 	</aside>
 
@@ -51,8 +64,8 @@
 <script src="js/modules/sticky-notes.js"></script>
 <script src="js/modules/timer.js"></script>
 <script src="js/modules/tally.js"></script>
+<script src="js/modules/tracker.js"></script>
 <script src="js/event-listeners.js"></script>
-
 
 </body>
 </html>

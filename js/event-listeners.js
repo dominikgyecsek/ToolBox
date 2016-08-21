@@ -10,7 +10,7 @@ $(document).ready(function() {
 	})
 
 	//setTimeout(function() {
-		$("#tally-add").trigger("click");
+		$(".module[data-module='13']").trigger("click");
 		$("#add-module").trigger("click");
 	//}, 300)
 

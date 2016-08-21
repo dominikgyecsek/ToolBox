@@ -57,7 +57,10 @@ Modules.prototype.add = function(moduleId) {
 		case 12:
 			timer.initialise(loaded);
 			break;
-		case 17:
+		case 13:
+			tracker.create(loaded);
+			break;
+		case 15:
 			tally.create(loaded);
 			break;
 		default:

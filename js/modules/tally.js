@@ -1,8 +1,4 @@
-var Tally = function () {
-
-
-
-}
+var Tally = function () {}
 
 Tally.prototype.create = function(id) {
 
@@ -34,10 +30,6 @@ Tally.prototype.randomCategory = function() {
 	];
 
 	return categories[m.random(0, categories.length-1)];
-
-}
-
-Tally.prototype.remove = function(id) {
 
 }
 
