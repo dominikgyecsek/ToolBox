@@ -10,8 +10,7 @@ $(document).ready(function() {
 	})
 
 	//setTimeout(function() {
-		$(".module[data-module='13']").trigger("click");
-		$("#add-module").trigger("click");
+		$(".module[data-module='13']").first().trigger("click");
 	//}, 300)
 
 	$("html").on("click", ".close-module", function() {
@@ -131,6 +130,25 @@ $(document).ready(function() {
 		var $this = $(this);
 		$(".frame").css("z-index", "5");
 		$this.css("z-index", "6");
+
+	})
+
+	// Tracker
+
+	$("html").on("click", ".tracker-start", function() {
+		
+		var $this = $(this).parent().parent();
+		tracker.start($this);
+
+	})
+
+	$("html").on("click", ".tracker-stop", function() {
+
+		var $frame = $(this).parent().parent();
+		var state = $frame.attr("data-state");
+		var id = $frame.attr("data-id");
+		var time = $frame.attr("data-time");
+		tracker.stop(id, state, time);
 
 	})
 

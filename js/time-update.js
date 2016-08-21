@@ -46,6 +46,15 @@ TimeUpdate.prototype.increase = function() {
 				$(".timer-remainder").text(update.addLeadingZero(hours) + ":" + update.addLeadingZero(minutes) + ":" + update.addLeadingZero(seconds))
 			}
 
+		} else if ( module == 3 ) {
+
+			var time = parseInt(row[2]) + 1;
+			var id = row[1];
+
+			row[2] = time;
+			$(".tracker[data-id=" + id + "]").attr("data-time", time);
+			$(".tracker[data-id=" + id + "]").find(".tracker-count").text( tracker.generateTimestampt(time) );
+
 		}
 
 	}
@@ -53,8 +62,12 @@ TimeUpdate.prototype.increase = function() {
 }
 
 TimeUpdate.prototype.stop = function() {
-	this.isRunning = false;
-	clearInterval(updateInterval);
+
+	if ( timeUpdates.length == 0 ) {
+		this.isRunning = false;
+		clearInterval(updateInterval);
+	}
+
 }
 
 TimeUpdate.prototype.addLeadingZero = function(number) {
