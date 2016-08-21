@@ -9,7 +9,7 @@ Tally.prototype.create = function(id) {
 	console.log(id);
 
 	var DOM = "\
-		<div data-module='17' data-id=" + id + " class='frame tally open-module'>\
+		<div data-module='15' data-id=" + id + " class='frame tally open-module'>\
 			" + m.controllers + "\
 			<div class='content'>\
 				<div class='contenteditable' contenteditable='true' onclick='$(this).focus();'>" +  tally.randomCategory() + "</div>\
