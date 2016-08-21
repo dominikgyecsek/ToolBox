@@ -126,6 +126,14 @@ $(document).ready(function() {
 		tally.decrease( $(this) );
 	})
 
+	$("html").on("drag", ".frame", function() {
+
+		var $this = $(this);
+		$(".frame").css("z-index", "5");
+		$this.css("z-index", "6");
+
+	})
+
 })
 
 var hasTimer = false;
