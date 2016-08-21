@@ -39,7 +39,7 @@ var Calculator = function() {
 Calculator.prototype.initialise = function() {
 	
 	$("main").append(this.DOM);
-	$(".calculator").draggable();
+	$(".calculator").draggable({ handle: '.controllers' });
 	$("#screen").text("0");
 	this.memory = 0;
 

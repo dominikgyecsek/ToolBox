@@ -5,16 +5,21 @@ Interface.prototype.initialize = function() {
 }
 
 Interface.prototype.openMenu = function() {
+
 	if ( $("aside").hasClass("close") ) {
+
 		$("aside").removeClass("close");
 		$("aside").addClass("open");
 		$("#add-module>i").text("close");
 		$("#aside-close").show();
+
 	} else {
+
 		$("aside").removeClass("open");
 		$("aside").addClass("close");
 		$("#add-module>i").text("menu");
-		$("#aside-close").hide();		
+		$("#aside-close").hide();
+				
 	}
 }
 

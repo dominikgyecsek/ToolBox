@@ -116,7 +116,7 @@ Timer.prototype.initialise = function(id) {
 	";
 
 	$("main").append(DOM);
-	$(".timer").last().draggable().resizable();
+	$(".timer").last().draggable({ handle: '.controllers' });
 
 }
 

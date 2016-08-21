@@ -100,7 +100,6 @@ button {
 	cursor: pointer;
 }
 
-
 .scrollbar-hide::-webkit-scrollbar {
 	width: 0px !important;
 }
@@ -111,4 +110,8 @@ button {
 
 .left {
 	float: left;
+}
+
+.controllers {
+	cursor: move;
 }

@@ -1,12 +1,16 @@
 .sticky {
-	background-color: #FAD089;
+	background-color: #FFF59D;
 	width: 200px;
 	border-radius: 3px;
-	cursor: move;
 	overflow: hidden;
+	color: #455A64;
 }
 
 .sticky .contenteditable {
 	outline: 0px solid transparent;
 	padding: 0px 7px 5px 8px;
+}
+
+.sticky .close-module>i {
+	color: #455A64;
 }

@@ -8,10 +8,6 @@
 	border-radius: 0px 0px 8px 8px;
 }
 
-.calculator {
-	cursor: move;
-}
-
 .calculator .controllers {
 	background-color: #594F4F;
 	border-radius: 8px 8px 0px 0px;
