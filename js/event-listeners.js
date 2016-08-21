@@ -10,7 +10,7 @@ $(document).ready(function() {
 	})
 
 	//setTimeout(function() {
-		$(".module[data-module='13']").first().trigger("click");
+		//$(".module[data-module='13']").first().trigger("click");
 	//}, 300)
 
 	$("html").on("click", ".close-module", function() {
