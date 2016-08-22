@@ -1,13 +1,12 @@
 var Timer = function() {
 	this.scrollTopMinute = 0;
 	this.scrollTopHour = 0;
-	this.hasTimer = false;
 }
 
 Timer.prototype.initialise = function(id) {
 
 	var DOM = "\
-		<div data-module='12' data-id=" + id + " class='frame timer open-module'>\
+		<div data-module='12' data-state='playing' data-time='undefined' data-id=" + id + " class='frame timer open-module'>\
 			" + m.controllers + "\
 			<div class='content scrollbar-hide'>\
 				<div class='timer-layer'></div>\
@@ -121,5 +120,3 @@ Timer.prototype.initialise = function(id) {
 }
 
 var timer = new Timer();
-
-console.log(timer.hasTimer);

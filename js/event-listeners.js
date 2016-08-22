@@ -26,53 +26,66 @@ $(document).ready(function() {
 		calc.press($(this));
 	})
 
+	// Timer
+
 	$("html").on("click", ".start-pause-timer", function() {
 
 		if ( $(this).text() == "Pause" ) {
+
 			$(this).text("Start");
+
 			for (var i = 0; i < timeUpdates.length; i++) {
 				var row = timeUpdates[i];
 				var module = row[0];
 				if (module == 1) {
 					var time = row[1];
+					$(".timer[data-id=" + 0 + "]").attr("data-time", time).attr("data-state", "paused");
+					timeUpdates.splice(i, 1);
 				}
-				timeUpdates[i] = [2, time];
 			}
-			hasTimer = true;
-			console.log(hasTimer);
-			return;
-		}
 
-		if ( hasTimer ) {
+		} else {
+
+			var time = $(".timer[data-id=" + 0 + "]").attr("data-time");
+			$(".timer[data-id=" + 0 + "]").attr("data-time", time).attr("data-state", "playing");
+
 			$(this).text("Pause");
-			for (var i = 0; i < timeUpdates.length; i++) {
-				var row = timeUpdates[i];
-				var module = row[0];
-				if (module == 2) {
-					var time = row[1];
-				}
-				timeUpdates[i] = [1, time];
-			}			
-			hasTimer = false;
+
+			if ( (time == "undefined") || (time == undefined) ) {
+
+				var minute = Math.ceil ( $("#timer-minute").scrollTop() / 19 );
+				var hour = Math.ceil ( $("#timer-hour").scrollTop() / 19 );
+				console.log(minute);
+				console.log(hour);
+				var time = minute + hour * 60;
+				if (time == 0) return;
+
+				$(".timer-picker, .timer-layer").hide();
+				$(".timer-remainder").show();
+				$(".start-pause-timer").text("Pause")
+				timeUpdates.push([1, time*60]);
+				console.log(timeUpdates);
+
+			} else {
+
+				timeUpdates.push([1, time]);
+				console.log(timeUpdates);
+
+			}
+
+			update.start();	
+			
 		}
-
-		var minute = $("#timer-minute").scrollTop() / 19;
-		var hour = $("#timer-hour").scrollTop() / 19;
-		var time = minute + hour * 60;
-		if (time == 0) return;
-
-		$(".timer-picker, .timer-layer").hide();
-		$(".timer-remainder").show();
-		$(".start-pause-timer").text("Pause")
-		timeUpdates.push([1, time*60]);
-		update.start();
 
 	})
 
 	$("html").on("click", ".stop-timer", function() {
+
 		$(".timer-remainder").hide();
 		$(".timer-picker, .timer-layer").show();
-		$(".start-pause-timer").text("Start")
+		$(".start-pause-timer").text("Start");
+		$(".timer[data-id=" + 0 + "]").attr("data-time", "undefined").attr("data-state", "paused");
+
 		for (var i = 0; i < timeUpdates.length; i++) {
 			var row = timeUpdates[i];
 			var module = row[0];
@@ -81,6 +94,7 @@ $(document).ready(function() {
 				break;
 			}
 		}
+
 	})
 
 	// Tally
@@ -121,5 +135,3 @@ $(document).ready(function() {
 	})
 
 })
-
-var hasTimer = false;

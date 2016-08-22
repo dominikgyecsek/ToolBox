@@ -57,12 +57,12 @@ Modules.prototype.add = function(moduleId) {
 		case 12:
 			timer.initialise(loaded);
 
-		$("#timer-minute").scroll(function () {
+			$("#timer-minute").scroll(function () {
 
 				var position = timer.scrollTopMinute;
 				var real = $("#timer-minute").scrollTop();
 
-				if ( position == real ) return;
+				if ( ( position > real + 1 ) || ( position > real - 1 ) ) return;
 
 				if ( position < real ) position += 19; 
 				else position -= 19;
@@ -72,15 +72,15 @@ Modules.prototype.add = function(moduleId) {
 
 				$("#timer-minute").scrollTop(position);
 
-
 			})
 
 			$("#timer-hour").scroll(function() {
 
 				var position = timer.scrollTopHour;
 				var real = $("#timer-hour").scrollTop();
+				console.log("POST: " + position + ", real: " + real);
 
-				if ( position == real ) return;
+				if ( ( position > real + 1 ) || ( position > real - 1 ) ) return;
 
 				if ( position < real ) position += 19; 
 				else position -= 19;
@@ -89,7 +89,6 @@ Modules.prototype.add = function(moduleId) {
 				timer.scrollTopHour = position;
 
 				$("#timer-hour").scrollTop(position);
-				timer.scrollTopHourBefore = real;
 
 			})
 

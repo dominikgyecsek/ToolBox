@@ -17,10 +17,9 @@ TimeUpdate.prototype.start = function() {
 
 TimeUpdate.prototype.increase = function() {
 
-	console.log("INC");
-
 	if (timeUpdates.length == 0) {
-		update.stop();
+		clearInterval(updateInterval);
+		this.isRunning = false;
 		return;
 	}
 
@@ -44,6 +43,8 @@ TimeUpdate.prototype.increase = function() {
 				$(".timer-picker, .timer-layer").show();
 			} else {
 				$(".timer-remainder").text(update.addLeadingZero(hours) + ":" + update.addLeadingZero(minutes) + ":" + update.addLeadingZero(seconds))
+				$(".timer[data-id='0']").attr("data-time", row[1]);
+				console.log(row[1]);
 			}
 
 		} else if ( module == 3 ) {
@@ -57,15 +58,6 @@ TimeUpdate.prototype.increase = function() {
 
 		}
 
-	}
-
-}
-
-TimeUpdate.prototype.stop = function() {
-
-	if ( timeUpdates.length == 0 ) {
-		this.isRunning = false;
-		clearInterval(updateInterval);
 	}
 
 }
