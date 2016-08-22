@@ -7,24 +7,24 @@ var Calculator = function() {
 				<div id='screen'>\
 				</div>\
 				<div class='buttons'>\
-					<span class='button fun'>+</span>\
-					<span class='button fun'>-</span>\
-					<span class='button fun'>*</span>\
-					<span class='button fun'>/</span>\
-					<span class='button number'>7</span>\
-					<span class='button number'>8</span>\
-					<span class='button number' id='nine'>9</span>\
-					<span class='button fun'>C</span>\
-					<span class='button number'>4</span>\
-					<span class='button number'>5</span>\
-					<span class='button number'>6</span>\
-					<span class='button fun'>+-</span>\
-					<span class='button number'>1</span>\
-					<span class='button number'>2</span>\
-					<span class='button number'>3</span>\
-					<span class='button fun' id='equal'>=</span>\
-					<span class='button number' id='zero'>0</span>\
-					<span class='button number' id='point'>.</span>\
+					<span class='button fun' data-fun='+'> <img src='images/calc-add.svg'> </span>\
+					<span class='button fun' data-fun='-'> <img src='images/calc-min.svg'> </span>\
+					<span class='button fun' data-fun='*'> <img src='images/calc-mul.svg'> </span>\
+					<span class='button fun' data-fun='/'> <img src='images/calc-div.svg'> </span>\
+					<span class='button number' data-fun='7'>7</span>\
+					<span class='button number' data-fun='8'>8</span>\
+					<span class='button number' data-fun='9' id='nine'>9</span>\
+					<span class='button fun' data-fun='C'>C</span>\
+					<span class='button number' data-fun='4'>4</span>\
+					<span class='button number' data-fun='5'>5</span>\
+					<span class='button number' data-fun='6'>6</span>\
+					<span class='button fun' data-fun='+-'>+-</span>\
+					<span class='button number' data-fun='1'>1</span>\
+					<span class='button number' data-fun='2'>2</span>\
+					<span class='button number' data-fun='3'>3</span>\
+					<span class='button fun' data-fun='=' id='equal'>=</span>\
+					<span class='button number' id='zero' data-fun='0'>0</span>\
+					<span class='button number' id='point' data-fun='.'>.</span>\
 				</div>\
 			</div>\
 		</div>\
@@ -99,7 +99,9 @@ Calculator.prototype.press = function($this) {
 	var screen = $("#screen").text();
 	if (screen == "0") screen = "";
 
-	var buttonContent = $this.text();
+	var buttonContent = $this.attr("data-fun");
+	console.log(buttonContent);
+
 	if ( (screen == "0") && (buttonContent == "0") ) return;
 
 	if ( $this.hasClass("number") ) {
