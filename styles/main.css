@@ -77,8 +77,8 @@ nav i {
 	font-size: 24px !important;
 }
 
-#add-module i {
-	padding: 8px 10px;
+#add-module {
+	height: 40px;
 }
 
 #calculator-add {
@@ -124,4 +124,69 @@ button {
 
 .controllers {
 	cursor: move;
+}
+
+.hamburger {
+	display: inline-block;
+	width: 20px;
+	height: 2px;
+	float: left;
+	position: absolute;
+	background-color: #737373;
+	margin: 0px 10px 5px 10px;
+	animation-duration: 0.3s;
+	animation-fill-mode: forwards;	
+}
+
+#hamburger-1 {
+	margin-top: 13px;
+	transform: rotateZ(0deg) translate(0px, 0px);
+}
+
+#hamburger-2 {
+	margin-top: 19px;
+	opacity: 1;
+}
+
+#hamburger-3 {
+	margin-top: 25px;
+	transform: rotateZ(0deg) translate(0px, 0px);
+}
+
+.hamburger-1-close { animation-name: hamburgerOne; }
+.hamburger-2-close { animation-name: hamburgerTwo; }
+.hamburger-3-close { animation-name: hamburgerThree; }
+
+.hamburger-1-open { animation-name: hamburgerOneOpen; }
+.hamburger-2-open { animation-name: hamburgerTwoOpen; }
+.hamburger-3-open { animation-name: hamburgerThreeOpen; }
+
+@keyframes hamburgerOne {
+	0% { transform: rotateZ(0deg) translate(0px, 0px); }
+	100% { transform: rotateZ(45deg) translate(5px, 5px); }
+}
+
+@keyframes hamburgerTwo {
+	0% { opacity: 1; }
+	100% { opacity: 0; }
+}
+
+@keyframes hamburgerThree {
+	0% { transform: rotateZ(0deg) translate(0px, 0px); }
+	100% { transform: rotateZ(-45deg) translate(4px, -4px) }
+}
+
+@keyframes hamburgerOneOpen {
+	0% { transform: rotateZ(45deg) translate(5px, 5px); }
+	100% { transform: rotateZ(0deg) translate(0px, 0px); }
+}
+
+@keyframes hamburgerTwoOpen {
+	0% { opacity: 0; }
+	100% { opacity: 1; }
+}
+
+@keyframes hamburgerThreeOpen {
+	0% { transform: rotateZ(-45deg) translate(4px, -4px); }
+	100% { transform: rotateZ(0deg) translate(0px, 0px); }
 }
