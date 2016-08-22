@@ -10,7 +10,7 @@ $(document).ready(function() {
 	})
 
 	//setTimeout(function() {
-		//$(".module[data-module='13']").first().trigger("click");
+		//$(".module[data-module='12']").first().trigger("click");
 	//}, 300)
 
 	$("html").on("click", ".close-module", function() {
@@ -24,38 +24,6 @@ $(document).ready(function() {
 
 	$("html").on("click", ".button", function() {
 		calc.press($(this));
-	})
-
-	$("#timer-minute").scroll(function(event) {
-
-		var position = timer.scrollTopMinute;
-		var real = $("#timer-minute").scrollTop();
-
-		if ( position == real ) return;
-
-		position += 19; 
-		if (position == 1140) position = 0;
-		timer.scrollTopMinute = position;
-
-		$("#timer-minute").scrollTop(position);
-
-	})
-
-	$("#timer-hour").scroll(function(event) {
-
-		var position = timer.scrollTopHour;
-		var real = $("#timer-hour").scrollTop();
-
-		if ( position == real ) return;
-
-		position += 19; 
-		if (position == 475) position = 0;
-		timer.scrollTopHour = position;
-
-		$("#timer-hour").scrollTop(position);
-
-		console.log(timer);
-
 	})
 
 	$("html").on("click", ".start-pause-timer", function() {

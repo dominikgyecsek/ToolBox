@@ -56,6 +56,43 @@ Modules.prototype.add = function(moduleId) {
 			break;
 		case 12:
 			timer.initialise(loaded);
+
+		$("#timer-minute").scroll(function () {
+
+				var position = timer.scrollTopMinute;
+				var real = $("#timer-minute").scrollTop();
+
+				if ( position == real ) return;
+
+				if ( position < real ) position += 19; 
+				else position -= 19;
+				
+				if (position == 1140) return;
+				timer.scrollTopMinute = position;
+
+				$("#timer-minute").scrollTop(position);
+
+
+			})
+
+			$("#timer-hour").scroll(function() {
+
+				var position = timer.scrollTopHour;
+				var real = $("#timer-hour").scrollTop();
+
+				if ( position == real ) return;
+
+				if ( position < real ) position += 19; 
+				else position -= 19;
+
+				if (position == 475) return;
+				timer.scrollTopHour = position;
+
+				$("#timer-hour").scrollTop(position);
+				timer.scrollTopHourBefore = real;
+
+			})
+
 			break;
 		case 13:
 			tracker.create(loaded);

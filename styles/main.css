@@ -27,7 +27,7 @@ main {
 
 .nav-items-group {
 	color: #737373 !important;
-	padding: 10px 0px;
+	padding: 11px 0px;
 }
 
 .nav-items-group span {
@@ -70,7 +70,6 @@ nav {
 }
 
 nav span, nav i {
-	color: rgb(170,170,170);
 	cursor: pointer;
 }
 

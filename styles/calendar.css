@@ -37,7 +37,7 @@
 .calendar_modern .calendar .viewport {
   overflow: hidden;
   zoom: 1;
-  height: 263px;
+  height: 275px;
   width: 240px;
   position: relative;
   border: 1px solid #26A69A;
@@ -81,6 +81,7 @@
 .calendar_modern .calendar .month .body .day_names {
   height: 25px;
   background: white;
+  margin: 2px 0px;
 }
 .calendar_modern .calendar .month .body .day_names i {
   display: block;
@@ -89,7 +90,6 @@
   text-align: center;
   font-style: normal;
   float: left;
-  /*font-weight: bold;*/
   width: 34.2px;
   color: #26A69A;;
   text-transform: uppercase;
@@ -97,24 +97,22 @@
 .calendar_modern .calendar .month .body .days i, .calendar_modern .calendar .month .body .days b, .calendar_modern .calendar .month .body .days s, .calendar_modern .calendar .month .body .days a {
   display: block;
   float: left;
-  width: 34.25px;
-  height: 33px;
+  width: 25px;
+  height: 25px;
   color: #757575;
-  font-size: 1.5em;
-  /*font-weight: bold;*/
-  line-height: 34px;
+  font-size: 13px;
+  line-height: 25px;
   text-align: center;
   font-style: normal;
   background: white;
   text-decoration: none;
 }
-.calendar_modern .calendar .month .body .days i.weekend, .calendar_modern .calendar .month .body .days b.weekend, .calendar_modern .calendar .month .body .days s.weekend, .calendar_modern .calendar .month .body .days a.weekend {
-
-}
+.calendar_modern .calendar .month .body .days i.weekend, .calendar_modern .calendar .month .body .days b.weekend, .calendar_modern .calendar .month .body .days s.weekend, .calendar_modern .calendar .month .body .days a.weekend {}
 
 .calendar_modern .calendar .month .body .days a {
-  color: grey;
-  background: rgb(244,244,244);
+  color: #009688;
+  font-weight: bold;
+  border-radius: 6px;
 }
 .calendar_modern .calendar .month .body .days a.today {}
 .calendar_modern .calendar .month .body .days a.selected {
@@ -122,8 +120,16 @@
 }
 
 .calendar_modern .calendar .month .body .days b, .calendar_modern .calendar .month .body .days i, .calendar_modern .calendar .month .body .days s {
-  color: #ccc;
+  color: #9E9E9E;
 }
 .calendar_modern .calendar .month .body .days b, .calendar_modern .calendar .month .body .days s {
   background: white;
+}
+
+.days i, .days a, .days s, .days b {
+  margin: 4.5px;
+}
+
+b {
+  font-weight: normal;
 }
