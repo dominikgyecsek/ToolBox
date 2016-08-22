@@ -112,6 +112,10 @@ Modules.prototype.add = function(moduleId) {
 Modules.prototype.close = function(frame) {
 
 	var moduleId = frame.parent().parent().attr("data-module")
+
+	if ( moduleId ==  12) $(".stop-timer").trigger("click");
+	console.log(moduleId);
+
 	this.loaded[moduleId] = this.loaded[moduleId] - 1;
 	$(frame).parent().parent().removeClass("open-module").addClass("close-module-anim");
 	setTimeout(function() {

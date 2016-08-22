@@ -9,9 +9,9 @@ $(document).ready(function() {
 		m.add(moduleId);
 	})
 
-	//setTimeout(function() {
-		//$(".module[data-module='12']").first().trigger("click");
-	//}, 300)
+	setTimeout(function() {
+		$(".module[data-module='13']").first().trigger("click");
+	}, 300)
 
 	$("html").on("click", ".close-module", function() {
 		var frame = $(this);

@@ -23,6 +23,8 @@ TimeUpdate.prototype.increase = function() {
 		return;
 	}
 
+	console.log("Cycle");
+
 	for (var i = 0; i < timeUpdates.length; i++) {
 		var row = timeUpdates[i];
 		var module = row[0];
@@ -44,7 +46,6 @@ TimeUpdate.prototype.increase = function() {
 			} else {
 				$(".timer-remainder").text(update.addLeadingZero(hours) + ":" + update.addLeadingZero(minutes) + ":" + update.addLeadingZero(seconds))
 				$(".timer[data-id='0']").attr("data-time", row[1]);
-				console.log(row[1]);
 			}
 
 		} else if ( module == 3 ) {

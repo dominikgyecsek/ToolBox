@@ -114,7 +114,11 @@
   font-weight: bold;
   border-radius: 6px;
 }
-.calendar_modern .calendar .month .body .days a.today {}
+.calendar_modern .calendar .month .body .days a.today {
+  border-radius: 100%;
+  color: white;
+  background-color: #26A69A;
+}
 .calendar_modern .calendar .month .body .days a.selected {
   color: white;
 }

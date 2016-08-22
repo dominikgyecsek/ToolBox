@@ -3,6 +3,10 @@ var Timer = function() {
 	this.scrollTopHour = 0;
 }
 
+Timer.prototype.destroy = function() {
+	
+}
+
 Timer.prototype.initialise = function(id) {
 
 	var DOM = "\

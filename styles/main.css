@@ -79,6 +79,7 @@ nav i {
 
 #add-module {
 	height: 40px;
+	width: 40px;
 }
 
 #calculator-add {
@@ -189,4 +190,16 @@ button {
 @keyframes hamburgerThreeOpen {
 	0% { transform: rotateZ(-45deg) translate(4px, -4px); }
 	100% { transform: rotateZ(0deg) translate(0px, 0px); }
+}
+
+#settings-btn {
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	margin: 8px;
+	transition: transform 0.5s;
+}
+
+#settings-btn:hover {
+	transform: rotateZ(45deg);
 }

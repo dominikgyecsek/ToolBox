@@ -9,7 +9,7 @@ Interface.prototype.openMenu = function() {
 	if ( $("aside").hasClass("close") ) {
 
 		$("aside").removeClass("close").addClass("open");
-		$("#aside-close").show();
+		if ( $(window).width() <= 867 ) $("#aside-close").show();
 		$("#hamburger-1").removeClass("hamburger-1-open").addClass("hamburger-1-close");
 		$("#hamburger-2").removeClass("hamburger-2-open").addClass("hamburger-2-close");
 		$("#hamburger-3").removeClass("hamburger-3-open").addClass("hamburger-3-close");
