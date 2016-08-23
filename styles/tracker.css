@@ -1,8 +1,5 @@
 .tracker {
 	background-color: #3F51B5;
-	width: 232px;
-	border-radius: 3px;
-	overflow: hidden;
 	color: #EEEEEE;
 }
 
@@ -12,8 +9,6 @@
 }
 
 .tracker-btn {
-	color: #3F51B5;
-	background-color: #EEEEEE;
 	border-radius: 100%;
 	width: 20px;
 	height: 20px;

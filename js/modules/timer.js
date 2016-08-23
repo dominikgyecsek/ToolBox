@@ -10,7 +10,7 @@ Timer.prototype.destroy = function() {
 Timer.prototype.initialise = function(id) {
 
 	var DOM = "\
-		<div data-theme='" + m.getDefaultSkin(10) + "' data-module='12' data-state='playing' data-time='undefined' data-id=" + id + " class='frame timer open-module'>\
+		<div data-theme='" + m.getDefaultSkin(12) + "' data-module='12' data-state='playing' data-time='undefined' data-id=" + id + " class='frame timer open-module'>\
 			" + m.controllers + "\
 			<div class='content scrollbar-hide'>\
 				<div class='timer-layer'></div>\

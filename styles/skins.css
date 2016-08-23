@@ -75,3 +75,89 @@
 	color: white;
 }
 
+/* Timer */
+
+.timer[data-theme="0"] {
+	background-color: rgb(240,240,240);
+}
+
+.timer[data-theme="0"] .timer-btn {
+	color: #737373;
+}
+
+.timer[data-theme="0"] .controllers i {
+	color: #737373;
+}
+
+.timer[data-theme="0"] .timer-layer {
+	background-color: rgba(0,0,0,0.08);
+}
+
+.timer[data-theme="1"] {
+	background-color: #212121;
+}
+
+.timer[data-theme="1"] .timer-btn {
+	color: #212121;
+	background-color: #737373;
+}
+
+.timer[data-theme="1"] .controllers i {
+	color: #737373;
+}
+
+.timer[data-theme="1"] .timer-layer {
+	background-color: rgba(255,255,255,0.08);
+}
+
+/* Time Tracker */
+
+.tracker[data-theme="0"] {
+	background-color: #3F51B5;
+	color: #EEEEEE;
+}
+
+.tracker[data-theme="0"] .tracker-btn {
+	color: #3F51B5;
+	background-color: #EEEEEE;
+}
+
+.tracker[data-theme="1"] {
+	background-color: #4CAF50;
+	color: #EEEEEE;
+}
+
+.tracker[data-theme="1"] .tracker-btn {
+	color: #4CAF50;
+	background-color: #EEEEEE;
+}
+
+.tracker[data-theme="2"] {
+	background-color: #F44336;
+	color: #EEEEEE;
+}
+
+.tracker[data-theme="2"] .tracker-btn {
+	color: #F44336;
+	background-color: #EEEEEE;
+}
+
+.tracker[data-theme="3"] {
+	background-color: #FF9800;
+	color: #EEEEEE;
+}
+
+.tracker[data-theme="3"] .tracker-btn {
+	color: #FF9800;
+	background-color: #EEEEEE;
+}
+
+.tracker[data-theme="4"] {
+	background-color: #607D8B;
+	color: #EEEEEE;
+}
+
+.tracker[data-theme="4"] .tracker-btn {
+	color: #607D8B;
+	background-color: #EEEEEE;
+}

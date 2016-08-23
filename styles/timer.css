@@ -1,5 +1,4 @@
 .timer {
-	background-color: rgb(240,240,240);
 	width: 250px;
 	border-radius: 3px;
 	overflow: hidden;
@@ -20,7 +19,6 @@
 	font-size: 14px;
 	border-radius: 100%;
 	float: left;
-	color: #737373;
 }
 
 .start-pause-timer {
@@ -37,29 +35,29 @@
 	overflow-x:scroll; 
 }
 
-	.timer-section {
-		padding: 7px 10px 16px 10px;
-		width: 67px;
-		float: left;
-		overflow-x:scroll; 
-		height: 72px;
-	}
+.timer-section {
+	padding: 7px 10px 16px 10px;
+	width: 67px;
+	float: left;
+	overflow-x:scroll; 
+	height: 72px;
+}
 
-		.timer-hour {
-			overflow-x:scroll; 
-		}
+.timer-hour {
+	overflow-x:scroll; 
+}
 
-			.timer-hour>div {
-				width: 25px;
-			}
+.timer-hour>div {
+	width: 25px;
+}
 
-		.timer-minute {
-			overflow-x:scroll; 
-		}
+.timer-minute {
+	overflow-x:scroll; 
+}
 
-			.timer-minute>div {
-				width: 25px;
-			}
+.timer-minute>div {
+	width: 25px;
+}
 
 .timer-label {
 	position: fixed;
@@ -72,7 +70,6 @@
 }
 
 .timer-layer {
-	background-color: rgba(0,0,0,0.08);
 	width: 120px;
 	height: 22px;
 	position: absolute;
@@ -81,14 +78,9 @@
 	left: 65px;
 }
 
-
 .timer-remainder {
 	display: none;
 	position: absolute;
 	font-size: 26px;
 	padding: 7px 65px;
-}
-
-.timer .controllers i {
-	color: #737373;
 }

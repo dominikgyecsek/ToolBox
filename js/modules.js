@@ -32,8 +32,8 @@ var Modules = function() {
 	this.themeNumber = {
 		10: 1,
 		11: 2,
-		12: 0,
-		13: 0,
+		12: 1,
+		13: 4,
 		14: 0,
 		15: 0,
 		16: 0

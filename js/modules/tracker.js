@@ -2,10 +2,8 @@ var Tracker = function () {}
 
 Tracker.prototype.create = function(id) {
 
-	console.log(id);
-
-	var DOM = "\
-		<div data-theme='" + m.getDefaultSkin(10) + "' data-module='15' data-time='0' data-state='paused' data-id=" + id + " class='frame tracker open-module'>\
+	$("main").append("\
+		<div data-theme='" + m.getDefaultSkin(13) + "' data-module='13' data-time='0' data-state='paused' data-id=" + id + " class='frame tracker open-module'>\
 			" + m.controllers + "\
 			<div class='content'>\
 				<div class='contenteditable' contenteditable='true' onclick='$(this).focus();'>Project Name</div>\
@@ -13,9 +11,8 @@ Tracker.prototype.create = function(id) {
 				<button class='tracker-btn tracker-start right'> <i class='material-icons'>play_arrow</i> </button>\
 			</div>\
 		</div>\
-	";
+	");
 
-	$("main").append(DOM);
 	$(".tracker").last().draggable({ handle: '.controllers' });
 	
 }
