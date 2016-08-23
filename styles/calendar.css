@@ -137,3 +137,11 @@
 b {
   font-weight: normal;
 }
+
+.frame.cal {
+  background-color: white;
+}
+
+.cal {
+  display: none;
+}

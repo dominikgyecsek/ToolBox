@@ -9,9 +9,9 @@ $(document).ready(function() {
 		m.add(moduleId);
 	})
 
-	setTimeout(function() {
+	/*setTimeout(function() {
 		$(".module[data-module='10']").first().trigger("click");
-	}, 300)
+	}, 300)*/
 
 	$("html").on("click", ".close-module", function() {
 		var frame = $(this);
@@ -55,8 +55,6 @@ $(document).ready(function() {
 
 				var minute = Math.ceil ( $("#timer-minute").scrollTop() / 19 );
 				var hour = Math.ceil ( $("#timer-hour").scrollTop() / 19 );
-				console.log(minute);
-				console.log(hour);
 				var time = minute + hour * 60;
 				if (time == 0) return;
 
@@ -64,12 +62,10 @@ $(document).ready(function() {
 				$(".timer-remainder").show();
 				$(".start-pause-timer").text("Pause")
 				timeUpdates.push([1, time*60]);
-				console.log(timeUpdates);
 
 			} else {
 
 				timeUpdates.push([1, time]);
-				console.log(timeUpdates);
 
 			}
 
@@ -132,6 +128,16 @@ $(document).ready(function() {
 		var time = $frame.attr("data-time");
 		tracker.stop(id, state, time);
 
+	})
+
+	/* SKin change */
+
+	$("html").on("click", ".skin-change", function() {
+		var $this = $(this);
+		var id = $this.parent().parent().attr("data-id");
+		var module = $this.parent().parent().attr("data-module");
+		var theme = $this.parent().parent().attr("data-theme");
+		m.changeSkin(id, module, theme);
 	})
 
 })

@@ -10,11 +10,11 @@
 	height: 21px;
 }
 
-.close-module {
+.close-module, .skin-change {
 	float: right;
 }
 
-.close-module>i {
+.close-module>i, .skin-change>i {
 	font-size: 15px;
 	color: white;
 	padding: 2px;

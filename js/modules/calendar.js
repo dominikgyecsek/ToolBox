@@ -267,7 +267,23 @@
         this.calendar = e, this.id = this.calendar.id
       }
       return e.prototype.template = function(e) {
-        return e == null && (e = ""), "<div class='calendar'>\n  <div class='nav'>\n    <i title='\u041d\u0430\u0437\u0430\u0434' class='material-icons'>keyboard_arrow_left</i> <b class='material-icons' title='\u0412\u043f\u0435\u0440\u0435\u0434'>keyboard_arrow_right </b>\n  </div>\n  <div class='viewport'>\n    <div class='months'>\n      " + e + "\n    </div>\n  </div>\n</div>"
+        return e == null && (e = ""), m.controllers + 
+          "<div data-module='16' data-id='0' data-theme='" + m.getDefaultSkin(10) + "' class='frame cal open-module'>\
+            " + m.controllers + "\
+            <div class='content'>" + 
+              "<div class='calendar'>\n\
+                <div class='nav'>\n\
+                  <i title='\u041d\u0430\u0437\u0430\u0434' class='material-icons'>keyboard_arrow_left</i>\
+                  <b class='material-icons' title='\u0412\u043f\u0435\u0440\u0435\u0434'>keyboard_arrow_right </b>\n\
+                </div>\n\
+                <div class='viewport'>\n\
+                  <div class='months'>\n" + 
+                    e + "\n\
+                  </div>\n\
+                </div>\n\
+              </div>\
+            </div>\
+          </div>"
       }, e.prototype.days_names = function() {
         var e, t, n, r;
         e = "";
@@ -327,3 +343,8 @@
       }), new CalendarBehavior(this.calendar)
     })
   }.call(this)
+
+  setTimeout(function() {
+    $(".cal").draggable({ handle: '.controllers' });
+  }, 500);
+  

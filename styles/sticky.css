@@ -11,7 +11,7 @@
 	padding: 0px 7px 5px 8px;
 }
 
-.sticky .close-module>i {
+.sticky .close-module>i, .sticky .skin-change>i {
 	color: #455A64;
 	top: 0px;
 }

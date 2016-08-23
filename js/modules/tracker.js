@@ -5,7 +5,7 @@ Tracker.prototype.create = function(id) {
 	console.log(id);
 
 	var DOM = "\
-		<div data-module='15' data-time='0' data-state='paused' data-id=" + id + " class='frame tracker open-module'>\
+		<div data-theme='" + m.getDefaultSkin(10) + "' data-module='15' data-time='0' data-state='paused' data-id=" + id + " class='frame tracker open-module'>\
 			" + m.controllers + "\
 			<div class='content'>\
 				<div class='contenteditable' contenteditable='true' onclick='$(this).focus();'>Project Name</div>\

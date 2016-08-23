@@ -4,6 +4,9 @@ var Modules = function() {
 		<span class='close-module'>\
 			<i class='material-icons'>close</i>\
 		</span>\
+		<span class='skin-change'>\
+			<i class='material-icons'>invert_colors</i>\
+		</span>\
 	</div>";
 
 	this.loaded = {
@@ -12,7 +15,8 @@ var Modules = function() {
 		12: 0,
 		13: 0,
 		14: 0,
-		15: 0
+		15: 0,
+		16: 0
 	}
 
 	this.limit = {
@@ -21,7 +25,8 @@ var Modules = function() {
 		12: 1,
 		13: 20,
 		14: 20,
-		15: 20
+		15: 20,
+		16: 1
 	}
 
 }
@@ -30,14 +35,19 @@ Modules.prototype.initialize = function() {
 	console.log("Modules Initialised");
 }
 
+Modules.prototype.getDefaultSkin = function(module) {
+	return 0;
+}
+
+Modules.prototype.changeSkin = function(id, module, theme) {
+	console.log(id + " - " + module + " - " + theme);
+}
+
 Modules.prototype.add = function(moduleId) {
 
-	console.log("ADDING: " + moduleId);
 	moduleId = parseInt(moduleId);
 	var loaded = this.loaded[moduleId];
 	var limit = this.limit[moduleId];
-	console.log("So far loaded: " + loaded);
-	console.log("Limit: " + limit);
 
 	if ( limit <= loaded ) {
 		alert("You can only have " + limit + " windows open with this module");
@@ -99,6 +109,9 @@ Modules.prototype.add = function(moduleId) {
 		case 15:
 			tally.create(loaded);
 			break;
+		case 16:
+			$(".cal").show();
+			break;
 		default:
 			console.log("Not implemented");
 			break;
@@ -111,15 +124,23 @@ Modules.prototype.add = function(moduleId) {
 
 Modules.prototype.close = function(frame) {
 
-	var moduleId = frame.parent().parent().attr("data-module")
+	var moduleId = frame.parent().parent().attr("data-module");
+	console.log(moduleId);
 
 	if ( moduleId ==  12) $(".stop-timer").trigger("click");
-	console.log(moduleId);
 
 	this.loaded[moduleId] = this.loaded[moduleId] - 1;
 	$(frame).parent().parent().removeClass("open-module").addClass("close-module-anim");
+
 	setTimeout(function() {
-		$(frame).parent().parent().remove();
+
+		if (moduleId == 16) {
+			$(frame).parent().parent().removeClass("close-module-anim").addClass("open-module").hide();
+		} else {
+			$(frame).parent().parent().remove();
+		}
+
+		
 	}, 300)
 
 }
