@@ -33,10 +33,10 @@ var Modules = function() {
 		10: 1,
 		11: 2,
 		12: 1,
-		13: 4,
+		13: 5,
 		14: 0,
-		15: 0,
-		16: 0
+		15: 5,
+		16: 5
 	}
 
 	this.currentTheme = {

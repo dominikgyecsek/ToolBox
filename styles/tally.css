@@ -1,19 +1,15 @@
 .tally {
-	background-color: #2196F3;
 	width: 200px;
 	border-radius: 3px;
 	overflow: hidden;
-	color: #EEEEEE;
 }
 
 .tally .contenteditable {
 	outline: 0px solid transparent;
-	padding: 0px 7px 9px 7px;
+	padding: 3px 7px 9px 7px;
 }
 
 .tally-btn {
-	color: #2196F3;
-	background-color: #EEEEEE;
 	border-radius: 100%;
 	width: 24px;
 	height: 24px;
@@ -36,4 +32,12 @@
 .tally-btn>i {
 	right: 6px;
 	bottom: 1px;
+}
+
+.tally {
+	color: #EEEEEE;
+}
+
+.tally .tally-btn {
+	background-color: #EEEEEE;
 }
