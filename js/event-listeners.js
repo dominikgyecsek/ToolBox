@@ -1,30 +1,10 @@
 $(document).ready(function() {
 
-	$("#add-module").click(function() {
-		iF.openMenu();
-	})
-
-	$(".module").click(function() {
-		var moduleId = $(this).attr("data-module")
-		m.add(moduleId);
-	})
-
-	/*setTimeout(function() {
-		$(".module[data-module='10']").first().trigger("click");
-	}, 300)*/
-
-	$("html").on("click", ".close-module", function() {
-		var frame = $(this);
-		m.close(frame);
-	})
-
-	$("#aside-close").click(function() {
-		$("#add-module").trigger("click");
-	})
-
-	$("html").on("click", ".button", function() {
-		calc.press($(this));
-	})
+	$("#add-module").click(function() { iF.openMenu(); })
+	$(".module").click(function() { m.add( $(this).attr("data-module") ); })
+	$("html").on("click", ".close-module", function() { m.close( $(this) ); })
+	$("#aside-close").click(function() { $("#add-module").trigger("click"); })
+	$("html").on("click", ".button", function() { calc.press( $(this) ); })
 
 	// Timer
 
@@ -60,8 +40,9 @@ $(document).ready(function() {
 
 				$(".timer-picker, .timer-layer").hide();
 				$(".timer-remainder").show();
-				$(".start-pause-timer").text("Pause")
-				timeUpdates.push([1, time*60]);
+				$(".start-pause-timer").text("Pause");
+				$(".timer-remainder").text(update.addLeadingZero(hour) + ":" + update.addLeadingZero(minute) + ":" + update.addLeadingZero(00));
+				timeUpdates.push([1, time*60-1]);
 
 			} else {
 
@@ -103,11 +84,12 @@ $(document).ready(function() {
 		tally.decrease( $(this) );
 	})
 
-	$("html").on("drag", ".frame", function() {
+	/* Focusing */
 
-		var $this = $(this);
+	$("html").on("mouseenter", ".frame", function() {
+
 		$(".frame").css("z-index", "5");
-		$this.css("z-index", "6");
+		$(this).css("z-index", "6");
 
 	})
 
@@ -115,29 +97,28 @@ $(document).ready(function() {
 
 	$("html").on("click", ".tracker-start", function() {
 		
-		var $this = $(this).parent().parent();
-		tracker.start($this);
+		tracker.start( $(this).parent().parent() );
 
 	})
 
 	$("html").on("click", ".tracker-stop", function() {
 
-		var $frame = $(this).parent().parent();
-		var state = $frame.attr("data-state");
-		var id = $frame.attr("data-id");
-		var time = $frame.attr("data-time");
-		tracker.stop(id, state, time);
+		var $this = $(this).parent().parent();
+		tracker.stop($this.attr("data-id"), $this.attr("data-state"), $this.attr("data-time"));
 
 	})
 
 	/* SKin change */
 
 	$("html").on("click", ".skin-change", function() {
-		var $this = $(this);
-		var id = $this.parent().parent().attr("data-id");
-		var module = $this.parent().parent().attr("data-module");
-		var theme = $this.parent().parent().attr("data-theme");
-		m.changeSkin(id, module, theme);
+		var $this = $(this).parent().parent();
+		m.changeSkin($this.attr("data-id"), $this.attr("data-module"), $this.attr("data-theme"));
+	})
+
+	/* Settings */
+
+	$("#settings-btn").click(function() {
+
 	})
 
 })
