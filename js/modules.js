@@ -29,6 +29,26 @@ var Modules = function() {
 		16: 1
 	}
 
+	this.themeNumber = {
+		10: 1,
+		11: 2,
+		12: 0,
+		13: 0,
+		14: 0,
+		15: 0,
+		16: 0
+	}
+
+	this.currentTheme = {
+		10: 0,
+		11: 0,
+		12: 0,
+		13: 0,
+		14: 0,
+		15: 0,
+		16: 0
+	}
+
 }
 
 Modules.prototype.initialize = function() {
@@ -36,11 +56,26 @@ Modules.prototype.initialize = function() {
 }
 
 Modules.prototype.getDefaultSkin = function(module) {
-	return 0;
+	
+	return m.currentTheme[module];
+
 }
 
 Modules.prototype.changeSkin = function(id, module, theme) {
+
 	console.log(id + " - " + module + " - " + theme);
+
+	var themeNumber = m.themeNumber[module];
+	
+	var currentTheme = $(".frame[data-id='" + id + "'][data-module='" + module + "']").attr("data-theme");
+	var nextTheme;
+
+	if (currentTheme < themeNumber) nextTheme = parseInt(currentTheme) + 1;
+	else nextTheme = 0;
+
+	$(".frame[data-id='" + id + "'][data-module='" + module + "']").attr("data-theme", nextTheme);
+	m.currentTheme[module] = nextTheme;
+
 }
 
 Modules.prototype.add = function(moduleId) {

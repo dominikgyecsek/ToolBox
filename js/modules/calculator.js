@@ -1,6 +1,13 @@
 var Calculator = function() {
 
-	this.DOM = "\
+	this.memory = 0;
+	this.func = null;
+
+}
+
+Calculator.prototype.initialise = function() {
+
+	$("main").append("\
 		<div data-module='10' data-id='0' data-theme='" + m.getDefaultSkin(10) + "' class='frame calculator open-module'>\
 			" + m.controllers + "\
 			<div class='content'>\
@@ -9,7 +16,7 @@ var Calculator = function() {
 				<div class='buttons'>\
 					<span class='button fun' data-fun='C'>C</span>\
 					<span class='button fun' data-fun='+-'> <img src='images/calc-inv.svg'> </span>\
-					<span class='button fun number' data-fun='back'> <i class='material-icons'>keyboard_backspace</i> </span>\
+					<span class='button fun number' data-fun='back'> <img src='images/calc-del.svg'> </span>\
 					<span class='button fun' data-fun='+'> <img src='images/calc-add.svg'> </span>\
 					<span class='button number' data-fun='7'>7</span>\
 					<span class='button number' data-fun='8'>8</span>\
@@ -29,17 +36,8 @@ var Calculator = function() {
 				</div>\
 			</div>\
 		</div>\
-	";
+	");
 
-	this.memory = 0;
-	this.func = null;
-
-
-}
-
-Calculator.prototype.initialise = function() {
-	
-	$("main").append(this.DOM);
 	$(".calculator").draggable({ handle: '.controllers' });
 	$("#screen").text("0");
 	this.memory = 0;

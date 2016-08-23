@@ -145,3 +145,19 @@ b {
 .cal {
   display: none;
 }
+
+.cal .controllers {
+  background-color: #26A69A;
+}
+
+.cal .controllers i {
+  color: white;
+}
+
+.cal:hover .viewport {
+  border-radius: 0px 0px 6px 6px;
+}
+
+.cal:hover .controllers {
+  border-radius: 6px 6px 0px 0px;
+}

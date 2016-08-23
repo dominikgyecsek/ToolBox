@@ -5,11 +5,14 @@
 .calculator>.content {
 	height: 300px;
 	background-color: #594F4F;
+	border-radius: 8px;
+}
+
+.calculator:hover>.content {
 	border-radius: 0px 0px 8px 8px;
 }
 
 .calculator .controllers {
-	background-color: #594F4F;
 	border-radius: 8px 8px 0px 0px;
 }
 
@@ -26,7 +29,6 @@
 .button img {
 	width: 22px;
 	height: 22px;
-	color: white;
 }
 
 #screen {
@@ -38,8 +40,6 @@
     font-size: 35px;
     text-align: right;
     padding: 2px 11px;
-	background-color: #594F4F;
-	color: #E0E4CC;
 }
 
 #point {
@@ -50,9 +50,6 @@
 
 #zero {
 	width: 100px;
-}
-
-#zero {
 	padding-right: 50px;
 	border-radius: 0px 0px 0px 5px;
 }
@@ -61,32 +58,13 @@
 	border-radius: 0px 6px 0px 0px;
 }
 
-.number {
-	background-color: #F38630;
-	color: #E0E4CC;
-}
-
-.fun {
-	background-color: #594F4F;
-	color: #E0E4CC;
-}
-
 .blink {
 	animation-name: blink;
 	animation-duration: 0.15s; 
 }
 
 @keyframes blink {
-	0% {
-		/*background-color: rgba(0,0,0,0);*/
-		opacity: 1;
-	}
-	50% {
-		/*background-color: rgba(0,0,0,0.1);*/
-		opacity: 0.7;
-	}
-	100% {
-		/*background-color: rgba(0,0,0,0);*/
-		opacity: 1;
-	}
+	0% { opacity: 1; }
+	50% { opacity: 0.6; }
+	100% { opacity: 1; }
 }
