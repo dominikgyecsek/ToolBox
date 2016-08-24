@@ -14,8 +14,8 @@ Tally.prototype.create = function(id) {
 		</div>\
 	";
 
-	$("main").append(DOM);
-	$(".tally").last().draggable({ handle: '.controllers' });
+	$("#dashboard").append(DOM);
+	$(".tally").last().draggable({ handle: '.controllers', containment: 'parent' });
 	
 }
 

@@ -2,7 +2,7 @@ var Tracker = function () {}
 
 Tracker.prototype.create = function(id) {
 
-	$("main").append("\
+	$("#dashboard").append("\
 		<div data-theme='" + m.getDefaultSkin(13) + "' data-module='13' data-time='0' data-state='paused' data-id=" + id + " class='frame tracker open-module'>\
 			" + m.controllers + "\
 			<div class='content'>\
@@ -13,7 +13,7 @@ Tracker.prototype.create = function(id) {
 		</div>\
 	");
 
-	$(".tracker").last().draggable({ handle: '.controllers' });
+	$(".tracker").last().draggable({ handle: '.controllers', containment: 'parent' });
 	
 }
 
@@ -27,7 +27,6 @@ Tracker.prototype.start = function($this) {
 
 	if ( state == "paused" ) {
 
-		// Start
 		$this.attr("data-state", "playing");
 		$this.find(".tracker-start>i").text("pause")
 
@@ -47,7 +46,6 @@ Tracker.prototype.start = function($this) {
 			if ( ( row[0] == 3 ) && ( parseInt(row[1]) == id ) ) {
 				console.log("STOPIING");
 				timeUpdates.splice(i, 1);
-				update.stop();
 				break;
 			}
 

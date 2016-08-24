@@ -115,10 +115,4 @@ $(document).ready(function() {
 		m.changeSkin($this.attr("data-id"), $this.attr("data-module"), $this.attr("data-theme"));
 	})
 
-	/* Settings */
-
-	$("#settings-btn").click(function() {
-
-	})
-
 })

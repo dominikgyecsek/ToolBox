@@ -7,7 +7,7 @@ var Calculator = function() {
 
 Calculator.prototype.initialise = function() {
 
-	$("main").append("\
+	$("#dashboard").append("\
 		<div data-module='10' data-id='0' data-theme='" + m.getDefaultSkin(10) + "' class='frame calculator open-module'>\
 			" + m.controllers + "\
 			<div class='content'>\
@@ -38,7 +38,7 @@ Calculator.prototype.initialise = function() {
 		</div>\
 	");
 
-	$(".calculator").draggable({ handle: '.controllers' });
+	$(".calculator").draggable({ handle: '.controllers', containment: 'parent' });
 	$("#screen").text("0");
 	this.memory = 0;
 
