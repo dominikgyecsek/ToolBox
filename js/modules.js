@@ -122,22 +122,28 @@ Modules.prototype.add = function(moduleId) {
 
 }
 
-Modules.prototype.close = function(frame) {
+Modules.prototype.close = function(frame, confirmation) {
 
 	var moduleId = frame.parent().parent().attr("data-module");
 	$(".module[data-module='" + moduleId + "']").removeClass("disabled");
 
 	if ( moduleId ==  12) $(".stop-timer").trigger("click");
+
+	if ( moduleId == 11 ) {
+		if (!confirmation) {
+			var id = frame.parent().parent().attr("data-id");
+			modal.show(0, id);
+			return;
+		}
+	}
+
 	this.loaded[moduleId] = this.loaded[moduleId] - 1;
 	$(frame).parent().parent().removeClass("open-module").addClass("close-module-anim");
 
 	setTimeout(function() {
 
-		if (moduleId == 16) {
-			$(frame).parent().parent().removeClass("close-module-anim").addClass("open-module").hide();
-		} else {
-			$(frame).parent().parent().remove();
-		}
+		if (moduleId == 16) $(frame).parent().parent().removeClass("close-module-anim").addClass("open-module").hide();
+		else $(frame).parent().parent().remove();
 
 		
 	}, 300)

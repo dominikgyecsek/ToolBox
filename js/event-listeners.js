@@ -126,4 +126,17 @@ $(document).ready(function() {
 		m.changeSkin($this.attr("data-id"), $this.attr("data-module"), $this.attr("data-theme"));
 	})
 
+	/* Modal */
+
+	$("#modal-close").click(function() {
+		$("#modal-wrapper").hide();
+	})
+
+	$("html").on("click", ".note-delete", function() {
+		var id = $("#modal-procede").attr("data-id")
+		var $frame = $(".sticky[data-id='" + id + "']");
+		m.close($frame.find(".close-module"), true)
+		$("#modal-wrapper").hide();
+	})
+
 })
