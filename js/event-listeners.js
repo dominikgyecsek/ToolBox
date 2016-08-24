@@ -115,4 +115,22 @@ $(document).ready(function() {
 		m.changeSkin($this.attr("data-id"), $this.attr("data-module"), $this.attr("data-theme"));
 	})
 
+	/* Window */
+
+	/*$(window).resize(function() {
+
+		var $this = $(window);
+
+		if ( ($this.height() < 360) || ($this.width() < 360) ) {
+			$("main").hide();
+			$("#oops").show();
+		} else {
+			$("#oops").hide();
+			$("main").show();
+		}
+
+	})
+
+	$(window).trigger("resize");*/
+
 })
