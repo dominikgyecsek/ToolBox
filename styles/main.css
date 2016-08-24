@@ -134,6 +134,10 @@ nav i {
 	cursor: pointer;
 }
 
+.disabled {
+	opacity: 0.4;
+}
+
 #aside-close {
 	width: calc(100% - 120px);
 	background-color: transparent;

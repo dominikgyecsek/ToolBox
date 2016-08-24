@@ -100,9 +100,9 @@ $(document).ready(function() {
 
 	})
 
-	setTimeout(function() {
+	/*setTimeout(function() {
 		$("#CO").trigger("click");
-	})
+	})*/
 
 	// Tracker
 
@@ -119,29 +119,11 @@ $(document).ready(function() {
 
 	})
 
-	/* SKin change */
+	/* Skin change */
 
 	$("html").on("click", ".skin-change", function() {
 		var $this = $(this).parent().parent();
 		m.changeSkin($this.attr("data-id"), $this.attr("data-module"), $this.attr("data-theme"));
 	})
-
-	/* Window */
-
-	/*$(window).resize(function() {
-
-		var $this = $(window);
-
-		if ( ($this.height() < 360) || ($this.width() < 360) ) {
-			$("main").hide();
-			$("#oops").show();
-		} else {
-			$("#oops").hide();
-			$("main").show();
-		}
-
-	})
-
-	$(window).trigger("resize");*/
 
 })

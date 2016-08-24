@@ -1,79 +1,24 @@
 /* Sticky Notes */
 
-.sticky[data-theme="0"] {
-	background-color: #FFF59D;
-	color: #4a4a4a;
-}
-
-.sticky[data-theme="0"] .controllers i {
-	color: #455A64;
-}
-
-.sticky[data-theme="1"] {
-	background-color: #ea9c5c;
-	color: #715c5c;
-}
-
-.sticky[data-theme="1"] .controllers i {
-	color: #715c5c;
-}
-
-.sticky[data-theme="2"] {
-	background-color: #607D8B;
-	color: #EEEEEE;
-}
-
-.sticky[data-theme="2"] .controllers i {
-	color: #EEEEEE;
-}
+.sticky[data-theme="0"] { background-color: #FFF59D; color: #4a4a4a; }
+.sticky[data-theme="0"] .controllers i { color: #455A64; }
+.sticky[data-theme="1"] { background-color: #ea9c5c; color: #715c5c; }
+.sticky[data-theme="1"] .controllers i { color: #715c5c; }
+.sticky[data-theme="2"] { background-color: #607D8B; color: #EEEEEE; }
+.sticky[data-theme="2"] .controllers i { color: #EEEEEE; }
 
 /* Calculator */
 
-.calculator[data-theme="0"] .controllers {
-	background-color: #594F4F;
-}
-
-.calculator[data-theme="0"] .button img {
-	color: white;
-}
-
-.calculator[data-theme="0"] #screen {
-	background-color: #594F4F;
-	color: #E0E4CC;
-}
-
-.calculator[data-theme="0"] .number {
-	background-color: #F38630;
-	color: #E0E4CC;
-}
-
-.calculator[data-theme="0"] .fun {
-	background-color: #594F4F;
-	color: #E0E4CC;
-}
-
-.calculator[data-theme="1"] .controllers {
-	background-color: #424242;
-}
-
-.calculator[data-theme="1"] .button img {
-	color: #424242;
-}
-
-.calculator[data-theme="1"] #screen {
-	background-color: #424242;
-	color: white;
-}
-
-.calculator[data-theme="1"] .number {
-	background-color: white;
-	color: #424242;
-}
-
-.calculator[data-theme="1"] .fun {
-	background-color: #424242;
-	color: white;
-}
+.calculator[data-theme="0"] .controllers { background-color: #594F4F; }
+.calculator[data-theme="0"] .button img { color: white; }
+.calculator[data-theme="0"] #screen { background-color: #594F4F; color: #E0E4CC; }
+.calculator[data-theme="0"] .number { background-color: #F38630; color: #E0E4CC; }
+.calculator[data-theme="0"] .fun { background-color: #594F4F; color: #E0E4CC; }
+.calculator[data-theme="1"] .controllers { background-color: #424242; }
+.calculator[data-theme="1"] .button img { color: #424242; }
+.calculator[data-theme="1"] #screen { background-color: #424242; color: white; }
+.calculator[data-theme="1"] .number { background-color: white; color: #424242; }
+.calculator[data-theme="1"] .fun { background-color: #424242; color: white; }
 
 /* Timer */
 
@@ -82,7 +27,6 @@
 .timer[data-theme="0"] .controllers i { color: #737373; }
 .timer[data-theme="0"] .timer-input { color: #737373; background-color: white; }
 .timer[data-theme="0"] .timer-remainder { color: #737373; }
-
 .timer[data-theme="1"] { background-color: rgb(60,60,60); }
 .timer[data-theme="1"] .timer-btn { color: white; background-color: #737373 }
 .timer[data-theme="1"] .controllers i { color: white; }

@@ -84,12 +84,13 @@ Modules.prototype.add = function(moduleId) {
 	var loaded = this.loaded[moduleId];
 	var limit = this.limit[moduleId];
 
-	if ( limit <= loaded ) {
-		alert("You can only have " + limit + " windows open with this module");
+	if ( limit == loaded ) {
 		return;
-	} else {
-		this.loaded[moduleId] = loaded + 1;
+	} else if ( limit == loaded + 1) {
+		$(".module[data-module='" + moduleId + "']").addClass("disabled");
 	}
+
+	this.loaded[moduleId] = loaded + 1;
 
 	switch (moduleId) {
 
@@ -124,10 +125,9 @@ Modules.prototype.add = function(moduleId) {
 Modules.prototype.close = function(frame) {
 
 	var moduleId = frame.parent().parent().attr("data-module");
-	console.log(moduleId);
+	$(".module[data-module='" + moduleId + "']").removeClass("disabled");
 
 	if ( moduleId ==  12) $(".stop-timer").trigger("click");
-
 	this.loaded[moduleId] = this.loaded[moduleId] - 1;
 	$(frame).parent().parent().removeClass("open-module").addClass("close-module-anim");
 
