@@ -29,13 +29,19 @@ $(document).ready(function() {
 			var time = $(".timer[data-id=" + 0 + "]").attr("data-time");
 			$(".timer[data-id=" + 0 + "]").attr("data-time", time).attr("data-state", "playing");
 
-			$(this).text("Pause");
-
 			if ( (time == "undefined") || (time == undefined) ) {
 
-				var minute = Math.ceil ( $("#timer-minute").scrollTop() / 19 );
-				var hour = Math.ceil ( $("#timer-hour").scrollTop() / 19 );
-				var time = minute + hour * 60;
+				var minute = $(".timer-minute").last().val();
+				var hour = $(".timer-hour").last().val();
+
+				if (minute == "") minute = 0;
+				if (hour == "") hour = 0;
+
+				if ( ! timer.validate(minute, hour) ) return;
+
+				$(this).text("Pause");
+
+				var time = parseInt(minute) + parseInt(hour) * 60;
 				if (time == 0) return;
 
 				$(".timer-picker, .timer-layer").hide();
@@ -46,6 +52,7 @@ $(document).ready(function() {
 
 			} else {
 
+				$(this).text("Pause");
 				timeUpdates.push([1, time]);
 
 			}
@@ -91,6 +98,10 @@ $(document).ready(function() {
 		$(".frame").css("z-index", "5");
 		$(this).css("z-index", "6");
 
+	})
+
+	setTimeout(function() {
+		$("#CO").trigger("click");
 	})
 
 	// Tracker

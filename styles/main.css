@@ -150,9 +150,17 @@ nav i {
 }
 
 button {
-	border: none;
+	border: none !important;
 	background-color: white;
 	cursor: pointer;
+}
+
+button:focus {
+	outline: 0;
+}
+
+input:focus {
+	outline: 0;
 }
 
 .scrollbar-hide::-webkit-scrollbar {
