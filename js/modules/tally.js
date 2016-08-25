@@ -24,7 +24,11 @@ Tally.prototype.randomCategory = function() {
 	const categories = [
 		"Movies seen",
 		"Books read",
-		"Cookies bought"
+		"Cookies bought",
+		"In relationship",
+		"Awkward moments",
+		"Swears",
+		"Chill from music"
 	];
 
 	return categories[m.random(0, categories.length-1)];

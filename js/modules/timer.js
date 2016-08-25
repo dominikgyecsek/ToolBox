@@ -1,11 +1,4 @@
-var Timer = function() {
-	this.scrollTopMinute = 0;
-	this.scrollTopHour = 0;
-}
-
-Timer.prototype.destroy = function() {
-
-}
+var Timer = function() {};
 
 Timer.prototype.initialise = function(id) {
 

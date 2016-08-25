@@ -100,10 +100,6 @@ $(document).ready(function() {
 
 	})
 
-	/*setTimeout(function() {
-		$("#CO").trigger("click");
-	})*/
-
 	// Tracker
 
 	$("html").on("click", ".tracker-start", function() {
@@ -138,5 +134,23 @@ $(document).ready(function() {
 		m.close($frame.find(".close-module"), true)
 		$("#modal-wrapper").hide();
 	})
+
+	/* Countdown */
+
+	$("html").on("click", ".start-stop-countdown", function() {
+		var $this = $(this).parent().parent().parent();
+		if ( $this.attr("data-set") == "unset" ) countdown.start($this);
+		else countdown.stop($this);
+	})
+
+	/* Window */
+
+	$(window).blur(function(){
+
+	});
+
+	$(window).focus(function(){
+		countdown.updateAll();
+	});
 
 })

@@ -63,6 +63,21 @@
 .tally[data-theme="5"] { background-color: #03A9F4; }
 .tally[data-theme="5"] .tally-btn { color: #03A9F4; }
 
+/* Countdown */
+
+.countdown[data-theme="0"] { background-color: #3F51B5; }
+.countdown[data-theme="0"] .countdown-btn { color: #3F51B5; }
+.countdown[data-theme="1"] { background-color: #4CAF50; }
+.countdown[data-theme="1"] .countdown-btn { color: #4CAF50; }
+.countdown[data-theme="2"] { background-color: #F44336; }
+.countdown[data-theme="2"] .countdown-btn { color: #F44336; }
+.countdown[data-theme="3"] { background-color: #FF9800; }
+.countdown[data-theme="3"] .countdown-btn { color: #FF9800; }
+.countdown[data-theme="4"] { background-color: #607D8B; }
+.countdown[data-theme="4"] .countdown-btn { color: #607D8B; }
+.countdown[data-theme="5"] { background-color: #03A9F4; }
+.countdown[data-theme="5"] .countdown-btn { color: #03A9F4; }
+
 /* Calendar */
 
 .cal[data-theme="0"] .controllers { background-color: #3F51B5; }

@@ -1,0 +1,67 @@
+.countdown {
+	width: 214px;
+	color: #EEEEEE;
+}
+
+.countdown-input {
+	margin: 7px 5px;
+	padding: 4px 8px;
+	border-radius: 4px;
+}
+
+.countdown-year {
+	width: 60px;
+}
+
+.countdown-month {
+	width: 60px;
+	margin: 7px 0px;
+}
+
+.countdown-day {
+	width: 60px;
+}
+
+.countdown-controllers {
+	height: 0px;
+	overflow: hidden;
+	transition: 0.3s height;
+}
+
+.countdown-btn {
+	width: 60px;
+	height: 23px;
+	font-size: 10px;
+	border-radius: 4px;
+	float: right;
+	margin: 0px 6px 6px 0px;
+}
+
+.countdown .content {
+	margin: 3px;
+}
+
+.countdown .contenteditable {
+	outline: 0px solid transparent;
+	padding: 3px 7px 2px 6px;
+	text-align: center;
+}
+
+.countdown-remaning {
+	display: none;
+	margin-bottom: 10px;
+}
+
+.countdown-date {
+	text-align: center;
+	margin-bottom: 8px;
+}
+
+.countdown-day-remaining {
+	text-align: center;
+	font-size: 22px;
+}
+
+.countdown:hover .countdown-controllers {
+	height: 29px;
+}

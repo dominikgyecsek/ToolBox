@@ -34,7 +34,7 @@ var Modules = function() {
 		11: 2,
 		12: 1,
 		13: 5,
-		14: 0,
+		14: 5,
 		15: 5,
 		16: 5
 	}
@@ -81,6 +81,7 @@ Modules.prototype.changeSkin = function(id, module, theme) {
 Modules.prototype.add = function(moduleId) {
 
 	moduleId = parseInt(moduleId);
+	console.log(moduleId);
 	var loaded = this.loaded[moduleId];
 	var limit = this.limit[moduleId];
 
@@ -95,7 +96,7 @@ Modules.prototype.add = function(moduleId) {
 	switch (moduleId) {
 
 		case 10:
-			calc.initialise();
+			calc.initialise(loaded);
 			break;
 		case 11:
 			sticker.initialise(loaded);
@@ -105,6 +106,9 @@ Modules.prototype.add = function(moduleId) {
 			break;
 		case 13:
 			tracker.create(loaded);
+			break;
+		case 14:
+			countdown.initialise(loaded);
 			break;
 		case 15:
 			tally.create(loaded);
