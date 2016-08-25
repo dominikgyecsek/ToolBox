@@ -267,7 +267,7 @@
         this.calendar = e, this.id = this.calendar.id
       }
       return e.prototype.template = function(e) {
-        return e == null && (e = ""), m.controllers + 
+        return e == null && (e = ""),
           "<div data-module='16' data-id='0' data-theme='" + m.getDefaultSkin(10) + "' class='frame cal open-module'>\
             " + m.controllers + "\
             <div class='content'>" + 
@@ -345,6 +345,6 @@
   }.call(this)
 
   setTimeout(function() {
-    $(".cal").draggable({ handle: '.controllers', containment: 'parent' });
+    $(".cal").draggable({ handle: '.controllers', containment: '#dashboard' });
   }, 500);
   

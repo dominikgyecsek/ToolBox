@@ -44,7 +44,6 @@
 .countdown .contenteditable {
 	outline: 0px solid transparent;
 	padding: 3px 7px 2px 6px;
-	text-align: center;
 }
 
 .countdown-remaning {

@@ -5,7 +5,7 @@ var Modules = function() {
 			<i class='material-icons'>close</i>\
 		</span>\
 		<span class='skin-change'>\
-			<i class='material-icons'>invert_colors</i>\
+			<i class='material-icons'>brush</i>\
 		</span>\
 	</div>";
 
