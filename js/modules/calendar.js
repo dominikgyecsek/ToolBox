@@ -345,6 +345,6 @@
   }.call(this)
 
   setTimeout(function() {
-    $(".cal").draggable({ handle: '.controllers', containment: '#dashboard' });
+    $(".cal").draggable({ handle: '.controllers', containment: '#dashboard' }).css("position", "absolute");
   }, 500);
   

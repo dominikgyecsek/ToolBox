@@ -13,7 +13,7 @@ Tracker.prototype.create = function(id) {
 		</div>\
 	");
 
-	$(".tracker").last().draggable({ handle: '.controllers', containment: 'parent' });
+	$(".tracker").last().draggable({ handle: '.controllers', containment: 'parent' }).css("position", "absolute");
 	
 }
 

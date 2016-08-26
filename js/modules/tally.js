@@ -15,7 +15,7 @@ Tally.prototype.create = function(id) {
 	";
 
 	$("#dashboard").append(DOM);
-	$(".tally").last().draggable({ handle: '.controllers', containment: 'parent' });
+	$(".tally").last().draggable({ handle: '.controllers', containment: 'parent' }).css("position", "absolute");
 	
 }
 
@@ -36,6 +36,7 @@ Tally.prototype.randomCategory = function() {
 }
 
 Tally.prototype.increase = function(id) {
+
 	$this = id;
 	var before = $this.parent().find(".tally-count").text();
 	$this.parent().find(".tally-count").text( parseInt(before) + 1 );
@@ -43,9 +44,11 @@ Tally.prototype.increase = function(id) {
 }
 
 Tally.prototype.decrease = function(id) {
+
 	$this = id;
 	var before = $this.parent().find(".tally-count").text();
 	$this.parent().find(".tally-count").text( parseInt(before) - 1 );
+
 }
 
 tally = new Tally();

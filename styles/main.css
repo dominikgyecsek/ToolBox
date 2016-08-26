@@ -139,6 +139,7 @@ button {
 	border: none !important;
 	background-color: white;
 	cursor: pointer;
+	padding: 0px;
 }
 
 button:focus {
@@ -280,8 +281,19 @@ input:focus {
 	transition: opacity 0.3s;
 }
 
+.big-hide-height {
+	height: 0px;
+	display: inline-block;
+	transition: height 0.3s;
+	overflow: hidden;
+}
+
 .frame:hover .big-hide-opacity {
 	opacity: 1;
+}
+
+.frame:hover .big-hide-height {
+	height: auto;
 }
 
 @media (max-width: 512px), (max-device-width: 1201px) {
@@ -330,6 +342,10 @@ input:focus {
 
 	.big-hide-opacity {
 		opacity: 1;
+	}
+
+	.big-hide-height {
+		height: auto;
 	}
 
 }

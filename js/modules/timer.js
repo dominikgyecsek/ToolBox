@@ -19,7 +19,7 @@ Timer.prototype.initialise = function(id) {
 	";
 
 	$("#dashboard").append(DOM);
-	$(".timer").last().draggable({ handle: '.controllers', containment: 'parent' });
+	$(".timer").last().draggable({ handle: '.controllers', containment: 'parent' }).css("position", "absolute");
 
 }
 

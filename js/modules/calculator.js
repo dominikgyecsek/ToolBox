@@ -38,7 +38,7 @@ Calculator.prototype.initialise = function() {
 		</div>\
 	");
 
-	$(".calculator").draggable({ handle: '.controllers', containment: 'parent' });
+	$(".calculator").draggable({ handle: '.controllers', containment: 'parent' }).css("position", "absolute");
 	$("#screen").text("0");
 	this.memory = 0;
 

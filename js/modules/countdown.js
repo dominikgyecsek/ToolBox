@@ -18,15 +18,17 @@ Countdown.prototype.initialise = function(id) {
 					<div class='countdown-day-remaining'></div>\
 					<div class='countdown-date'></div>\
 				</div>\
-				<div class='countdown-controllers'>\
-					<button class='start-stop-countdown countdown-btn'>Start</button>\
-				</div>\
+					<div class='countdown-controllers'>\
+						<span class='big-hide-height'>\
+						<button class='start-stop-countdown countdown-btn'>Start</button>\
+						</span>\
+					</div>\
 			</div>\
 		</div>\
 	";
 
 	$("#dashboard").append(DOM);
-	$(".countdown").last().draggable({ handle: '.controllers', containment: 'parent' });
+	$(".countdown").last().draggable({ handle: '.controllers', containment: 'parent' }).css("position", "absolute");
 
 }
 
