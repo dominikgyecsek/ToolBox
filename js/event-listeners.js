@@ -45,16 +45,9 @@ $(document).ready(function() {
 
 	// Tracker
 
-	$("html").on("click", ".tracker-start", function() {
-		
+	$("html").on("click", ".tracker-count", function() {
+
 		tracker.start( $(this).parent().parent() );
-
-	})
-
-	$("html").on("click", ".tracker-stop", function() {
-
-		var $this = $(this).parent().parent();
-		tracker.stop($this.attr("data-id"), $this.attr("data-state"), $this.attr("data-time"));
 
 	})
 

@@ -69,7 +69,6 @@ Countdown.prototype.start = function($frame) {
 			});
 
 			$frame.find(".countdown-picker").hide();
-			//$frame.find(".countdown-remaining").show();
 			$frame.find(".start-stop-countdown").text("Stop");
 			this.update(id, days, prettyDate);
 
@@ -106,9 +105,6 @@ Countdown.prototype.updateAll = function() {
 		var previousDays = $this.attr("data-remaining");
 		var date = $this.attr("data-time");
 		var newDays = countdown.difference(date);
-
-		console.log(newDays);
-		console.log(previousDays);
 		
 		if (newDays != previousDays) {
 			var prettyDate = $this.attr("data-pretty");
@@ -144,7 +140,7 @@ Countdown.prototype.difference = function(date) {
 	var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
 	if (diffDays < 1) return false;
 	else return diffDays;
-	
+
 }
 
 Countdown.prototype.validate = function(date) {

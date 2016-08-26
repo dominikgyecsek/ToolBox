@@ -8,14 +8,6 @@
 	padding: 3px 7px 2px 6px;
 }
 
-.tracker-btn {
-	border-radius: 100%;
-	width: 20px;
-	height: 20px;
-	margin: 4px 6px 6px 6px;
-	cursor: pointer;
-}
-
 .tracker .content {
 	padding: 4px;
 }
@@ -25,14 +17,5 @@
     margin: 2px 4px;
     display: block;
     text-align: center;
-}
-
-.tracker-btn>i {
-	right: 6px;
-	bottom: 1px;
-	font-size: 20px;
-}
-
-.tracker .tracker-btn {
-	background-color: #EEEEEE;
+    cursor: pointer;
 }

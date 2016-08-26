@@ -8,7 +8,6 @@ Tracker.prototype.create = function(id) {
 			<div class='content'>\
 				<div class='contenteditable' contenteditable='true' onclick='$(this).focus();'>" + this.randomCategory() + "</div>\
 				<span class='tracker-count'> 0 days 00:00:00</span>\
-				<button class='tracker-btn tracker-start right'> <i class='material-icons'>play_arrow</i> </button>\
 			</div>\
 		</div>\
 	");
@@ -34,7 +33,7 @@ Tracker.prototype.randomCategory = function() {
 
 Tracker.prototype.start = function($this) {
 
-	console.log("Start");
+	console.log($this)
 
 	var state = $this.attr("data-state");
 	var id = $this.attr("data-id");
@@ -68,10 +67,6 @@ Tracker.prototype.start = function($this) {
 
 	}
 
-}
-
-Tracker.prototype.stop = function(id) {
-	console.log("STOP");
 }
 
 Tracker.prototype.generateTimestampt = function(time) {
