@@ -22,9 +22,7 @@ TimeUpdate.prototype.increase = function() {
 		this.isRunning = false;
 		return;
 	}
-
-	console.log("Cycle");
-
+	
 	for (var i = 0; i < timeUpdates.length; i++) {
 		var row = timeUpdates[i];
 		var module = row[0];

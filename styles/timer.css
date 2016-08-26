@@ -32,9 +32,10 @@
 }
 
 .timer-picker {
-	width: 140px;
-	float: left;
+	width: calc(100% - 94px);
 	margin: 3px 9px;
+	display: inline-block;
+	text-align: center;
 }
 
 .timer-remainder {
@@ -42,7 +43,7 @@
 	position: absolute;
 	font-size: 26px;
 	padding: 4px 0px;
-	width: 236px;
+	width: calc(100% - 15px);
 	text-align: center;
 }
 

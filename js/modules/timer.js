@@ -7,13 +7,17 @@ Timer.prototype.initialise = function(id) {
 			" + m.controllers + "\
 			<div class='content scrollbar-hide'>\
 				<div class='contenteditable' contenteditable='true' onclick='$(this).focus();'>" + this.randomCategory() + "</div>\
-				<button class='stop-timer timer-btn'>Stop</button>\
+				<span class='big-hide-opacity'>\
+					<button class='stop-timer timer-btn'>Stop</button>\
+				</span>\
 				<div class='timer-remainder'></div>\
 				<div class='timer-picker'>\
 					<input type='text' class='timer-input timer-hour' placeholder='hour'>\
 					<input type='text' class='timer-input timer-minute' placeholder='minute'>\
 				</div>\
-				<button class='start-pause-timer timer-btn'>Start</button>\
+				<span class='big-hide-opacity'>\
+					<button class='start-pause-timer timer-btn'>Start</button>\
+				</span>\
 			</div>\
 		</div>\
 	";

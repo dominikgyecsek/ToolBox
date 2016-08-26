@@ -1,9 +1,15 @@
 .frame.calculator {
-	width: 200px;
+	width: 202px;
+	border-radius: 0px;
+}
+
+.calculator>.controllers {
+	width: 202px;
 }
 
 .calculator>.content {
 	height: 300px;
+	width: 202px;
 	background-color: #594F4F;
 }
 

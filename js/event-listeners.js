@@ -14,13 +14,13 @@ $(document).ready(function() {
 
 	$("html").on("click", ".start-pause-timer", function() {
 
-		timer.start( $(this).parent().parent() );
+		timer.start( $(this).parent().parent().parent() );
 
 	})
 
 	$("html").on("click", ".stop-timer", function() {
 
-		timer.stop( $(this).parent().parent() );
+		timer.stop( $(this).parent().parent().parent() );
 
 	})
 
