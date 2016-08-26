@@ -81,7 +81,7 @@ $(document).ready(function() {
 	/* Countdown */
 
 	$("html").on("click", ".start-stop-countdown", function() {
-		var $this = $(this).parent().parent().parent();
+		var $this = $(this).parent().parent().parent().parent();
 		if ( $this.attr("data-set") == "unset" ) countdown.start($this);
 		else countdown.stop($this);
 	})

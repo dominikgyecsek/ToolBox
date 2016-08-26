@@ -1,6 +1,6 @@
 .tracker {
 	color: #EEEEEE;
-	width: 230px;
+	width: 220px;
 }
 
 .tracker .contenteditable {
@@ -23,8 +23,8 @@
 .tracker-count {
 	font-size: 22px;
     margin: 2px 4px;
-    width: 180px;
-    display: inline-block;
+    display: block;
+    text-align: center;
 }
 
 .tracker-btn>i {

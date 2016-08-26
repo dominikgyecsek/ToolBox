@@ -7,7 +7,7 @@ Tracker.prototype.create = function(id) {
 			" + m.controllers + "\
 			<div class='content'>\
 				<div class='contenteditable' contenteditable='true' onclick='$(this).focus();'>" + this.randomCategory() + "</div>\
-				<span class='tracker-count left'> 0 days 00:00:00</span>\
+				<span class='tracker-count'> 0 days 00:00:00</span>\
 				<button class='tracker-btn tracker-start right'> <i class='material-icons'>play_arrow</i> </button>\
 			</div>\
 		</div>\

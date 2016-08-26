@@ -49,9 +49,6 @@ Countdown.prototype.randomCategory = function() {
 }
 
 Countdown.prototype.start = function($frame) {
-	
-	console.log("Start");
-	console.log($frame);
 
 	var date = $frame.find(".countdown-month").val() + "/" + $frame.find(".countdown-day").val() + "/" + $frame.find(".countdown-year").val();
 
@@ -72,7 +69,7 @@ Countdown.prototype.start = function($frame) {
 			});
 
 			$frame.find(".countdown-picker").hide();
-			$frame.find(".countdown-remaining").show();
+			//$frame.find(".countdown-remaining").show();
 			$frame.find(".start-stop-countdown").text("Stop");
 			this.update(id, days, prettyDate);
 
@@ -126,24 +123,28 @@ Countdown.prototype.updateAll = function() {
 Countdown.prototype.stop = function($frame) {
 
 	$frame.attr("data-set", "unset");
-	$frame.find(".start-stop-countdown").text("Stop");
 	$frame.find(".countdown-picker").show();
-	$frame.find(".countdown-remaining").hide();
+	$frame.find(".countdown-day-remaining, .countdown-date").text("");
 	$frame.find(".start-stop-countdown").text("Start");
+
 }
 
 Countdown.prototype.prettyDate = function(date) {
+
 	var prettyDate = new Date(date);
 	return prettyDate.getFullYear() + "." + update.addLeadingZero(prettyDate.getMonth()) + "." + update.addLeadingZero(prettyDate.getDate());
+
 }
 
 Countdown.prototype.difference = function(date) {
+
 	var now = new Date();
 	var will = new Date(date);
 	var timeDiff = Math.abs(will.getTime() - now.getTime());
 	var diffDays = Math.ceil(timeDiff / (1000 * 3600 * 24)); 
 	if (diffDays < 1) return false;
 	else return diffDays;
+	
 }
 
 Countdown.prototype.validate = function(date) {
