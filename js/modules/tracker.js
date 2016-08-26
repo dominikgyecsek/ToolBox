@@ -6,7 +6,7 @@ Tracker.prototype.create = function(id) {
 		<div data-theme='" + m.getDefaultSkin(13) + "' data-module='13' data-time='0' data-state='paused' data-id=" + id + " class='frame tracker open-module'>\
 			" + m.controllers + "\
 			<div class='content'>\
-				<div class='contenteditable' contenteditable='true' onclick='$(this).focus();'>Project Name</div>\
+				<div class='contenteditable' contenteditable='true' onclick='$(this).focus();'>" + this.randomCategory() + "</div>\
 				<span class='tracker-count left'> 0 days 00:00:00</span>\
 				<button class='tracker-btn tracker-start right'> <i class='material-icons'>play_arrow</i> </button>\
 			</div>\
@@ -15,6 +15,21 @@ Tracker.prototype.create = function(id) {
 
 	$(".tracker").last().draggable({ handle: '.controllers', containment: 'parent' }).css("position", "absolute");
 	
+}
+
+Tracker.prototype.randomCategory = function() {
+
+	const categories = [
+		"Brainstorming",
+		"Sleeping",
+		"Running",
+		"Coding",
+		"Playing",
+		"Working"
+	];
+
+	return categories[m.random(0, categories.length-1)];
+
 }
 
 Tracker.prototype.start = function($this) {

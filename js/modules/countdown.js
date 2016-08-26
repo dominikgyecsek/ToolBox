@@ -8,7 +8,7 @@ Countdown.prototype.initialise = function(id) {
 		<div data-set='unset' data-theme='" + m.getDefaultSkin(14) + "' data-module='14' data-time='undefined' data-id=" + id + " class='frame countdown open-module'>\
 			" + m.controllers + "\
 			<div class='content scrollbar-hide'>\
-				<div class='contenteditable' contenteditable='true' onclick='$(this).focus();'>Aniversary</div>\
+				<div class='contenteditable' contenteditable='true' onclick='$(this).focus();'>" + this.randomCategory() + "</div>\
 				<div class='countdown-picker'>\
 					<input type='text' class='countdown-input countdown-year' placeholder='year' value='" + date.getFullYear() + "'>\
 					<input type='text' class='countdown-input countdown-month' placeholder='month' value='" + eval( date.getMonth() + 1 ) + "'>\
@@ -29,6 +29,22 @@ Countdown.prototype.initialise = function(id) {
 
 	$("#dashboard").append(DOM);
 	$(".countdown").last().draggable({ handle: '.controllers', containment: 'parent' }).css("position", "absolute");
+
+}
+
+Countdown.prototype.randomCategory = function() {
+
+	const categories = [
+		"Vacation",
+		"Golden anniversary",
+		"Subscription",
+		"University",
+		"GoT Finale",
+		"Birthday",
+		"Christmas"
+	];
+
+	return categories[m.random(0, categories.length-1)];
 
 }
 

@@ -6,7 +6,7 @@ Timer.prototype.initialise = function(id) {
 		<div data-theme='" + m.getDefaultSkin(12) + "' data-module='12' data-state='paused' data-time='undefined' data-id=" + id + " class='frame timer open-module'>\
 			" + m.controllers + "\
 			<div class='content scrollbar-hide'>\
-				<div class='contenteditable' contenteditable='true' onclick='$(this).focus();'>Eggs</div>\
+				<div class='contenteditable' contenteditable='true' onclick='$(this).focus();'>" + this.randomCategory() + "</div>\
 				<button class='stop-timer timer-btn'>Stop</button>\
 				<div class='timer-remainder'></div>\
 				<div class='timer-picker'>\
@@ -22,6 +22,19 @@ Timer.prototype.initialise = function(id) {
 	$(".timer").last().draggable({ handle: '.controllers', containment: 'parent' }).css("position", "absolute");
 
 }
+
+Timer.prototype.randomCategory = function() {
+
+	const categories = [
+		"Trun off oven",
+		"Meditation",
+		"Running"
+	];
+
+	return categories[m.random(0, categories.length-1)];
+
+}
+
 
 Timer.prototype.validate = function(m, h) {
 
