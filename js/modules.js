@@ -21,11 +21,11 @@ var Modules = function() {
 
 	this.limit = {
 		10: 1,
-		11: 20,
-		12: 1,
-		13: 20,
-		14: 20,
-		15: 20,
+		11: 30,
+		12: 10,
+		13: 30,
+		14: 30,
+		15: 30,
 		16: 1
 	}
 
@@ -127,7 +127,7 @@ Modules.prototype.close = function(frame, confirmation) {
 	var moduleId = frame.parent().parent().attr("data-module");
 	$(".module[data-module='" + moduleId + "']").removeClass("disabled");
 
-	if ( moduleId ==  12) $(".stop-timer").trigger("click");
+	if ( moduleId ==  12) frame.parent().parent().find(".stop-timer").trigger("click");
 
 	if ( moduleId == 11 ) {
 		if (!confirmation) {
