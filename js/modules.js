@@ -75,7 +75,6 @@ Modules.prototype.changeSkin = function(id, module, theme) {
 Modules.prototype.add = function(moduleId) {
 
 	moduleId = parseInt(moduleId);
-	console.log(moduleId);
 	var loaded = this.loaded[moduleId];
 	var limit = this.limit[moduleId];
 
@@ -116,9 +115,9 @@ Modules.prototype.add = function(moduleId) {
 
 	}
 
+	$("#add-module").first().trigger("click");
 	$(".frame").css("z-index", "5");
 	$(".frame[data-id='" + loaded + "'][data-module='" + moduleId + "'").css("z-index", "6");
-	$("#add-module").trigger("click");
 
 }
 
