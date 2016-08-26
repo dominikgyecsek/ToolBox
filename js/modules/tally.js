@@ -7,9 +7,9 @@ Tally.prototype.create = function(id) {
 			" + m.controllers + "\
 			<div class='content'>\
 				<div class='contenteditable' contenteditable='true' onclick='$(this).focus();'>" +  tally.randomCategory() + "</div>\
-				<button class='tally-btn tally-dec left'> <i class='material-icons'>remove</i> </button>\
 				<span class='tally-count'> 0 </span>\
-				<button class='tally-btn tally-inc right'> <i class='material-icons'>add</i> </button>\
+				<span class='big-hide-opacity'><button class='tally-btn tally-dec left'> <i class='material-icons'>remove</i> </button>\
+				<button class='tally-btn tally-inc right'> <i class='material-icons'>add</i> </button></span>\
 			</div>\
 		</div>\
 	";

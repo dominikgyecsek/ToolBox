@@ -7,7 +7,7 @@ var Calculator = function() {
 
 Calculator.prototype.initialise = function() {
 
-	$("#dashboard").append("\
+	$("#dashboard").prepend("\
 		<div data-module='10' data-id='0' data-theme='" + m.getDefaultSkin(10) + "' class='frame calculator open-module frame-mobile-center'>\
 			" + m.controllers + "\
 			<div class='content'>\

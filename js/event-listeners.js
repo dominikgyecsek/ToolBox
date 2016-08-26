@@ -1,7 +1,11 @@
 $(document).ready(function() {
 
 	$("#add-module").click(function() { iF.openMenu(); })
-	$(".module").click(function() { m.add( $(this).attr("data-module") ); })
+
+	$(".module").click(function() {
+		m.add( $(this).attr("data-module") );
+	})
+
 	$("html").on("click", ".close-module", function() { m.close( $(this) ); })
 	$("#aside-close").click(function() { $("#add-module").trigger("click"); })
 	$("html").on("click", ".button", function() { calc.press( $(this) ); })
@@ -23,11 +27,11 @@ $(document).ready(function() {
 	// Tally
 
 	$("html").on("click", ".tally-inc", function() {
-		tally.increase( $(this) );
+		tally.increase( $(this).parent() );
 	})
 
 	$("html").on("click", ".tally-dec", function() {
-		tally.decrease( $(this) );
+		tally.decrease( $(this).parent() );
 	})
 
 	/* Focusing */
