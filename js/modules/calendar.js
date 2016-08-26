@@ -268,7 +268,7 @@
       }
       return e.prototype.template = function(e) {
         return e == null && (e = ""),
-          "<div data-module='16' data-id='0' data-theme='" + m.getDefaultSkin(10) + "' class='frame cal open-module'>\
+          "<div data-module='16' data-id='0' data-theme='" + m.getDefaultSkin(10) + "' class='frame cal open-module frame-mobile-center'>\
             " + m.controllers + "\
             <div class='content'>" + 
               "<div class='calendar'>\n\

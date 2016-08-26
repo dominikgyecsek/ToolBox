@@ -291,7 +291,44 @@ input:focus {
 	background-color: #616161;
 }
 
-@media (max-width: 360px), (max-height: 360px) {
+/*@media (max-width: 360px), (max-height: 360px) {
 	main { display: none; }
 	#oops { display: block; }
+}*/
+
+@media (max-width: 512px), (max-device-width: 1200px) {
+
+	.frame {
+		display: block;
+		position: static !important;
+		width: 100% !important;
+		margin-bottom: 8px;
+	}
+
+	.frame .controllers {
+		max-height: 21px;
+	}
+
+	#dashboard {
+		top: 55px;
+		height: calc(100% - 55px);
+	}
+
+	.calculator .content {
+		width: 200px;
+		margin: auto;
+	}
+
+	.calculator.frame {
+		background-color: white;
+	}
+
+	#calendar {
+		position: static;
+	}
+
+	#calendar .viewport {
+		margin: auto;
+	}
+
 }
