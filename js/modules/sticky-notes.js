@@ -14,7 +14,7 @@ Sticky.prototype.initialise = function(id) {
 	";
 
 	$("#dashboard").append(DOM);
-	$(".sticky").last().draggable({ handle: '.controllers', containment: 'parent', opacity: 0.6 }).resizable();
+	$(".sticky").last().draggable({ handle: '.controllers', containment: 'parent' }).resizable();
 
 }
 

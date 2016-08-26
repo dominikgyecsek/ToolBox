@@ -71,7 +71,7 @@ Countdown.prototype.start = function($frame) {
 	}
 
 	console.log($frame);
-	
+
 }
 
 Countdown.prototype.update = function(id, remainingDays, prettyDate) {

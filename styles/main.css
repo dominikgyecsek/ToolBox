@@ -105,8 +105,6 @@ nav {
 }
 
 nav.open {
-	/*border-radius: 0px;
-	width: 120px;*/
 	box-shadow: none;
 }
 

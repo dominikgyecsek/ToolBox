@@ -51,10 +51,6 @@ var Modules = function() {
 
 }
 
-Modules.prototype.initialize = function() {
-	console.log("Modules Initialised");
-}
-
 Modules.prototype.getDefaultSkin = function(module) {
 	
 	return m.currentTheme[module];
@@ -62,8 +58,6 @@ Modules.prototype.getDefaultSkin = function(module) {
 }
 
 Modules.prototype.changeSkin = function(id, module, theme) {
-
-	console.log(id + " - " + module + " - " + theme);
 
 	var themeNumber = m.themeNumber[module];
 	
@@ -122,6 +116,8 @@ Modules.prototype.add = function(moduleId) {
 
 	}
 
+	$(".frame").css("z-index", "5");
+	$(".frame[data-id='" + loaded + "'][data-module='" + moduleId + "'").css("z-index", "6");
 	$("#add-module").trigger("click");
 
 }
@@ -159,4 +155,3 @@ Modules.prototype.random = function(min, max) {
 }
 
 var m = new Modules();
-m.initialize();

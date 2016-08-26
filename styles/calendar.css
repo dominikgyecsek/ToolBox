@@ -111,7 +111,7 @@
 }
 
 .calendar_modern .calendar .month .body .days a {
-  border-radius: 6px;
+
 }
 
 .calendar_modern .calendar .month .body .days a.today {
@@ -148,7 +148,7 @@ b {
 }
 
 .cal .controllers {
-  border-radius: 6px 6px 0px 0px;
+  border-radius: 0px;
 }
 
 .cal .controllers i {
@@ -156,5 +156,5 @@ b {
 }
 
 .cal:hover .viewport {
-  border-radius: 0px 0px 6px 6px;
+  border-radius: 0px;
 }
