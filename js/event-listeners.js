@@ -95,4 +95,21 @@ $(document).ready(function() {
 		storage.save();
 	});
 
+	$(".module-group").click(function() {
+		
+		var $this = $(this);
+		var module = $(this).attr("data-module");
+		var state = $(this).attr("data-collapse");
+
+		if ( state == "open" ) {
+			console.log("CLOSE: " + module);
+			$(this).attr("data-collapse", "collapsed");
+			$(".frame[data-module='" + module + "']").hide();
+		} else {
+			$(this).attr("data-collapse", "open");
+			$(".frame[data-module='" + module + "']").show();			
+		}
+
+	})
+
 })

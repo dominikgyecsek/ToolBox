@@ -25,23 +25,24 @@ Storage.prototype.retrieve = function() {
 	} else {
 
 		$("#dashboard").append('\
-		<div class="calendar_modern" id="calendar"></div>\
-		<div id="calculator"></div>\
-		<div id="sticky-notes">\
-			<div data-module="11" class="big-hide module-group hide">Sticky Notes</div>\
-		</div>\
-		<div id="tallies">\
-			<div data-module="15" class="big-hide module-group hide">Tallies</div>\
-		</div>\
-		<div id="timers">\
-			<div data-module="12" class="big-hide module-group hide">Timers</div>\
-		</div>\
-		<div id="time-trackers">\
-			<div data-module="13" class="big-hide module-group hide">Time Trackers</div>\
-		</div>\
-		<div id="countdowns">\
-			<div data-module="14" class="big-hide module-group hide">Countdowns</div>\
-		</div>')
+			<div class="calendar_modern" id="calendar"></div>\
+			<div id="calculator"></div>\
+			<div id="sticky-notes">\
+				<div data-module="11" data-collapse="open" class="big-hide module-group hide">Sticky Notes</div>\
+			</div>\
+			<div id="tallies">\
+				<div data-module="15" data-collapse="open" class="big-hide module-group hide">Tallies</div>\
+			</div>\
+			<div id="timers">\
+				<div data-module="12" data-collapse="open" class="big-hide module-group hide">Timers</div>\
+			</div>\
+			<div id="time-trackers">\
+				<div data-module="13" data-collapse="open" class="big-hide module-group hide">Time Trackers</div>\
+			</div>\
+			<div id="countdowns">\
+				<div data-module="14" data-collapse="open" class="big-hide module-group hide">Countdowns</div>\
+			</div>\
+		')
 
 		console.log("EMPTY");
 
