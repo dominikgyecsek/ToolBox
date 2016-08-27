@@ -70,6 +70,8 @@ Modules.prototype.changeSkin = function(id, module, theme) {
 	$(".frame[data-id='" + id + "'][data-module='" + module + "']").attr("data-theme", nextTheme);
 	m.currentTheme[module] = nextTheme;
 
+	storage.save();
+
 }
 
 Modules.prototype.add = function(moduleId) {
@@ -115,13 +117,13 @@ Modules.prototype.add = function(moduleId) {
 
 	}
 
-	console.log(moduleId);
-
 	if ( ( moduleId != 10 ) && ( moduleId != 16 ) ) $(".module-group[data-module='" + moduleId + "']").removeClass("hide");
 
 	$("#add-module").first().trigger("click");
 	$(".frame").css("z-index", "5");
 	$(".frame[data-id='" + loaded + "'][data-module='" + moduleId + "'").css("z-index", "6");
+
+	storage.save();
 
 }
 
@@ -151,7 +153,7 @@ Modules.prototype.close = function(frame, confirmation) {
 
 		if (moduleId == 16) $(frame).parent().parent().removeClass("close-module-anim").addClass("open-module").hide();
 		else $(frame).parent().parent().remove();
-
+		storage.save();
 		
 	}, 300)
 

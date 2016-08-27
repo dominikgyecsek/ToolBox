@@ -90,4 +90,9 @@ $(document).ready(function() {
 		countdown.updateAll();
 	});
 
+		
+	$(window).on('beforeunload', function(){
+		storage.save();
+	});
+
 })
