@@ -7,16 +7,16 @@ Timer.prototype.initialise = function(id) {
 			" + m.controllers + "\
 			<div class='content scrollbar-hide'>\
 				<div class='contenteditable title' contenteditable='true' onclick='$(this).focus();'>" + this.randomCategory() + "</div>\
-				<span class='big-hide-opacity'>\
-					<button class='stop-timer timer-btn'>Stop</button>\
+				<span class='big-hide-opacity timer-btn-wrapper'>\
+					<i class='stop-timer timer-btn material-icons'>stop</i>\
 				</span>\
 				<div class='timer-remainder info'></div>\
 				<div class='timer-picker'>\
 					<input type='text' class='timer-input timer-hour' placeholder='hour'>\
 					<input type='text' class='timer-input timer-minute' placeholder='min'>\
 				</div>\
-				<span class='big-hide-opacity'>\
-					<button class='start-pause-timer timer-btn'>Start</button>\
+				<span class='big-hide-opacity timer-btn-wrapper'>\
+					<i class='start-pause-timer timer-btn material-icons'>play_arrow</i>\
 				</span>\
 			</div>\
 		</div>\
@@ -53,11 +53,11 @@ Timer.prototype.start = function($this) {
 
 	var id = $this.attr("data-id");
 
-	if ( $this.find(".start-pause-timer").text() == "Pause" ) {
+	if ( $this.find(".start-pause-timer").text() == "pause" ) {
 
 		console.log("PAUSE");
 
-		$this.find(".start-pause-timer").text("Start")
+		$this.find(".start-pause-timer").text("play_arrow")
 
 		for (var i = 0; i < update.timeUpdates.length; i++) {
 			var row = update.timeUpdates[i];
@@ -82,20 +82,18 @@ Timer.prototype.start = function($this) {
 
 			if ( ! timer.validate(minute, hour) ) return;
 
-			$this.find(".start-pause-timer").text("Pause")
-
 			var time = parseInt(minute) + parseInt(hour) * 60;
 			if (time == 0) return;
 
 			$this.find(".timer-picker, .timer-layer").hide();
 			$this.find(".timer-remainder").show();
-			$this.find(".start-pause-timer").text("Pause");
+			$this.find(".start-pause-timer").text("pause");
 			$this.find(".timer-remainder").text(update.addLeadingZero(hour) + ":" + update.addLeadingZero(minute) + ":" + update.addLeadingZero(00));
 			update.timeUpdates.push([1, time*60-1, id]);
 
 		} else {
 
-			$this.find(".start-pause-timer").text("Pause")
+			$this.find(".start-pause-timer").text("pause")
 			update.timeUpdates.push([1, time, id]);
 
 		}
@@ -112,7 +110,7 @@ Timer.prototype.stop = function($this) {
 
 	$this.find(".timer-remainder").hide();
 	$this.find(".timer-picker, .timer-layer").show();
-	$this.find(".start-pause-timer").text("Start");
+	$this.find(".start-pause-timer").text("play_arrow");
 	$(".timer[data-id=" + id + "]").attr("data-time", "undefined").attr("data-state", "paused");
 
 	for (var i = 0; i < update.timeUpdates.length; i++) {

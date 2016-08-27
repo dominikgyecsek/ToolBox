@@ -90,6 +90,7 @@ $(document).ready(function() {
 
 	$(window).focus(function(){
 		countdown.updateAll();
+		isItToday();
 	});
 
 		
