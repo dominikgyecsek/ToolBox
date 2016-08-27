@@ -1,9 +1,5 @@
 var Interface = function() {}
 
-Interface.prototype.initialize = function() {
-	console.log("Initializing interface");
-}
-
 Interface.prototype.openMenu = function() {
 
 	if ( $("aside").hasClass("close") ) {
@@ -28,4 +24,3 @@ Interface.prototype.openMenu = function() {
 }
 
 var iF = new Interface();
-iF.initialize();

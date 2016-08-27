@@ -85,10 +85,12 @@ $(document).ready(function() {
 	/* Window */
 
 	$(window).blur(function(){
-
+		update.isRunning = false;
+		clearInterval(updateInterval);
 	});
 
 	$(window).focus(function(){
+		update.start()
 		countdown.updateAll();
 		isItToday();
 	});

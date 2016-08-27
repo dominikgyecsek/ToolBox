@@ -43,18 +43,13 @@ TimeUpdate.prototype.increase = function() {
 		this.previousSecond = currentTimeStamp;
 	} else if ( this.previousSecond + 1 !=  currentTimeStamp) {
 		timeAway = currentTimeStamp - this.previousSecond;
-		//alert("TIME CORRUPTED, timeaway: " + timeAway);
 	}
-
-	console.log(this.previousSecond);
-	console.log(currentTimeStamp);
 
 	this.previousSecond = currentTimeStamp;
 
 	for (var i = 0; i < update.timeUpdates.length; i++) {
 
 		var row = update.timeUpdates[i];
-		console.log(row);
 		var module = row[0];
 
 		if (module == 1) {
@@ -70,9 +65,8 @@ TimeUpdate.prototype.increase = function() {
 			var $this = $(".timer[data-id='" + id + "']");
 
 			if ( row[1] <= 0 ) {
-				alert("Times Up!");
-				$this.find(".timer-remainder").hide();
-				$this.find(".timer-picker, .timer-layer").show();
+				//alert("Times Up!");
+				$this.find(".stop-timer").trigger("click");
 			} else {
 				$this.find(".timer-remainder").text(update.addLeadingZero(hours) + ":" + update.addLeadingZero(minutes) + ":" + update.addLeadingZero(seconds))
 				$this.find(".timer[data-id='0']").attr("data-time", row[1]);

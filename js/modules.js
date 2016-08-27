@@ -88,7 +88,6 @@ Modules.prototype.add = function(moduleId) {
 	if ( (moduleId != 10) && (moduleId != 16) ) {
 		for (var i = 0; i < 100; i++) {
 			if ( $(".frame[data-id='" + i + "'][data-module='" + moduleId + "']").length == 0 ) {
-				console.log("FOUND A HOLE AT " + i);
 				loaded = i;
 				break;
 			}

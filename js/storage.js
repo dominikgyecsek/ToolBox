@@ -9,8 +9,6 @@ Storage.prototype.retrieve = function() {
 	//localStorage.clear();
 
 	if ( localStorage.getItem("dashboard") != null ) {
-
-		console.log("LOAD");
 		
 		$("#dashboard").append(JSON.parse(localStorage.getItem("dashboard")));
 		$(".frame").draggable({ handle: '.controllers', containment: '#dashboard' }).css("position", "absolute");
