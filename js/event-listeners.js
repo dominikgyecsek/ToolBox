@@ -51,6 +51,12 @@ $(document).ready(function() {
 
 	})
 
+	/* Sticky Notes */
+
+	$("html").on("keyup", ".sticky .contenteditable", function() {
+		storage.save();
+	})
+
 	/* Skin change */
 
 	$("html").on("click", ".skin-change", function() {
@@ -85,6 +91,7 @@ $(document).ready(function() {
 	/* Window */
 
 	$(window).blur(function(){
+		storage.save();
 		update.isRunning = false;
 		clearInterval(updateInterval);
 	});

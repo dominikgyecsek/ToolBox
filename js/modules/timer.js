@@ -100,6 +100,8 @@ Timer.prototype.start = function($this) {
 		
 	}
 
+	storage.save()();
+
 }
 
 Timer.prototype.stop = function($this) {
@@ -118,6 +120,8 @@ Timer.prototype.stop = function($this) {
 			break;
 		}
 	}
+
+	storage.save()();
 
 }
 

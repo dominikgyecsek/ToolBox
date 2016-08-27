@@ -65,7 +65,8 @@ TimeUpdate.prototype.increase = function() {
 			var $this = $(".timer[data-id='" + id + "']");
 
 			if ( row[1] <= 0 ) {
-				//alert("Times Up!");
+				var audio = new Audio('sounds/alert.mp3');
+				audio.play();
 				$this.find(".stop-timer").trigger("click");
 			} else {
 				$this.find(".timer-remainder").text(update.addLeadingZero(hours) + ":" + update.addLeadingZero(minutes) + ":" + update.addLeadingZero(seconds))

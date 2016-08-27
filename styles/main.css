@@ -120,10 +120,6 @@ nav i {
 	opacity: 0.5;
 }
 
-.blur .content {
-	opacity: 0;
-}
-
 #aside-close {
 	width: 100%;
 	background-color: transparent;

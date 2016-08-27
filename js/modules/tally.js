@@ -37,6 +37,7 @@ Tally.prototype.increase = function(id) {
 	$this = id;
 	var before = $this.parent().find(".tally-count").text();
 	$this.parent().find(".tally-count").text( parseInt(before) + 1 );
+	storage.save()();
 	
 }
 
@@ -45,6 +46,7 @@ Tally.prototype.decrease = function(id) {
 	$this = id;
 	var before = $this.parent().find(".tally-count").text();
 	$this.parent().find(".tally-count").text( parseInt(before) - 1 );
+	storage.save()();
 
 }
 

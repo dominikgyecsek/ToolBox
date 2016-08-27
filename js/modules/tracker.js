@@ -33,8 +33,6 @@ Tracker.prototype.randomCategory = function() {
 
 Tracker.prototype.start = function($this) {
 
-	console.log($this)
-
 	var state = $this.attr("data-state");
 	var id = $this.attr("data-id");
 	var time = $this.attr("data-time");
@@ -66,6 +64,8 @@ Tracker.prototype.start = function($this) {
 		}
 
 	}
+
+	storage.save()();
 
 }
 
