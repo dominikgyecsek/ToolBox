@@ -1,30 +1,33 @@
-var timeUpdates  = [
-	
-]
-
 var TimeUpdate = function() {
 	this.isRunning = false;
+	this.timeUpdates = []
 }
 
 TimeUpdate.prototype.start = function() {
+
+	if (update.timeUpdates.length < 1) return;
+	
 	if ( !this.isRunning ) {
 		updateInterval = setInterval(function() {
 			update.increase();
 		}, 1000);
 		this.isRunning = true;
 	}
+
+	storage.save();
+
 }
 
 TimeUpdate.prototype.increase = function() {
 
-	if (timeUpdates.length == 0) {
+	if (update.timeUpdates.length == 0) {
 		clearInterval(updateInterval);
 		this.isRunning = false;
 		return;
 	}
 
-	for (var i = 0; i < timeUpdates.length; i++) {
-		var row = timeUpdates[i];
+	for (var i = 0; i < update.timeUpdates.length; i++) {
+		var row = update.timeUpdates[i];
 		var module = row[0];
 
 		if (module == 1) {

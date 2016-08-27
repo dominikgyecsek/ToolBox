@@ -59,11 +59,11 @@ Timer.prototype.start = function($this) {
 
 		$this.find(".start-pause-timer").text("Start")
 
-		for (var i = 0; i < timeUpdates.length; i++) {
-			var row = timeUpdates[i];
+		for (var i = 0; i < update.timeUpdates.length; i++) {
+			var row = update.timeUpdates[i];
 			if ( ( row[0] == 1 ) && ( row[2] == id ) ) {
 				$(".timer[data-id=" + id + "]").attr("data-time",  row[1]).attr("data-state", "paused");
-				timeUpdates.splice(i, 1);
+				update.timeUpdates.splice(i, 1);
 			}
 		}
 
@@ -91,12 +91,12 @@ Timer.prototype.start = function($this) {
 			$this.find(".timer-remainder").show();
 			$this.find(".start-pause-timer").text("Pause");
 			$this.find(".timer-remainder").text(update.addLeadingZero(hour) + ":" + update.addLeadingZero(minute) + ":" + update.addLeadingZero(00));
-			timeUpdates.push([1, time*60-1, id]);
+			update.timeUpdates.push([1, time*60-1, id]);
 
 		} else {
 
 			$this.find(".start-pause-timer").text("Pause")
-			timeUpdates.push([1, time, id]);
+			update.timeUpdates.push([1, time, id]);
 
 		}
 
@@ -115,10 +115,10 @@ Timer.prototype.stop = function($this) {
 	$this.find(".start-pause-timer").text("Start");
 	$(".timer[data-id=" + id + "]").attr("data-time", "undefined").attr("data-state", "paused");
 
-	for (var i = 0; i < timeUpdates.length; i++) {
-		var row = timeUpdates[i];
+	for (var i = 0; i < update.timeUpdates.length; i++) {
+		var row = update.timeUpdates[i];
 		if ( ( row[0] == 1 ) && ( row[2] == id ) ) {
-			timeUpdates.splice(i, 1);
+			update.timeUpdates.splice(i, 1);
 			break;
 		}
 	}

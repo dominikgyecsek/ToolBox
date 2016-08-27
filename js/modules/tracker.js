@@ -44,7 +44,7 @@ Tracker.prototype.start = function($this) {
 		$this.attr("data-state", "playing");
 		$this.find(".tracker-start>i").text("pause")
 
-		timeUpdates.push([3, id, time]);
+		update.timeUpdates.push([3, id, time]);
 		update.start();
 
 	} else {
@@ -52,14 +52,14 @@ Tracker.prototype.start = function($this) {
 		$this.attr("data-state", "paused");
 		$this.find(".tracker-start>i").text("play_arrow")
 
-		for (var i = 0; i < timeUpdates.length; i++) {
+		for (var i = 0; i < update.timeUpdates.length; i++) {
 
-			var row = timeUpdates[i];
+			var row = update.timeUpdates[i];
 			console.log(row);
 
 			if ( ( row[0] == 3 ) && ( parseInt(row[1]) == id ) ) {
 				console.log("STOPIING");
-				timeUpdates.splice(i, 1);
+				update.timeUpdates.splice(i, 1);
 				break;
 			}
 

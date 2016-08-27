@@ -13,9 +13,14 @@ Storage.prototype.retrieve = function() {
 		console.log("LOAD");
 		
 		$("#dashboard").append(JSON.parse(localStorage.getItem("dashboard")));
-		$(".frame").draggable({ handle: '.controllers', containment: '#dashboard' });
+		$(".frame").draggable({ handle: '.controllers', containment: '#dashboard' }).css("position", "ab");
+		$(".sticky").resizable();
 		m.loaded = JSON.parse(localStorage.getItem("loaded"));
 		m.currentTheme = JSON.parse(localStorage.getItem("currentTheme"));
+		update.timeUpdates = JSON.parse(localStorage.getItem("timeUpdates"));
+		update.start();
+
+		//statrt
 		
 	} else {
 
@@ -51,6 +56,7 @@ Storage.prototype.save = function() {
 	localStorage.setItem("dashboard", JSON.stringify(dashboard));
 	localStorage.setItem("loaded", JSON.stringify(m.loaded));
 	localStorage.setItem("currentTheme", JSON.stringify(m.currentTheme));
+	localStorage.setItem("timeUpdates", JSON.stringify(update.timeUpdates));
 
 }
 
