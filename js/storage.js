@@ -46,7 +46,9 @@ Storage.prototype.retrieve = function() {
 			</div>\
 		')
 
-		recalculateCalendar();
+		setTimeout(function() {
+			recalculateCalendar();
+		}, 1000);
 
 	}
 

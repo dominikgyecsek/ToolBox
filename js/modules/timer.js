@@ -55,8 +55,6 @@ Timer.prototype.start = function($this) {
 
 	if ( $this.find(".start-pause-timer").text() == "pause" ) {
 
-		console.log("PAUSE");
-
 		$this.find(".start-pause-timer").text("play_arrow")
 
 		for (var i = 0; i < update.timeUpdates.length; i++) {
@@ -89,7 +87,7 @@ Timer.prototype.start = function($this) {
 			$this.find(".timer-remainder").show();
 			$this.find(".start-pause-timer").text("pause");
 			$this.find(".timer-remainder").text(update.addLeadingZero(hour) + ":" + update.addLeadingZero(minute) + ":" + update.addLeadingZero(00));
-			update.timeUpdates.push([1, time*60-1, id]);
+			update.timeUpdates.push([1, time*60, id]);
 
 		} else {
 
