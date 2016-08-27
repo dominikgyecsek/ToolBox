@@ -9,7 +9,18 @@
 
 .calendar_modern .calendar .nav {
   height: 0;
-  position: relative;
+  z-index: 1;
+  width: 240px;
+  margin: auto;
+  color: white;
+}
+
+#previous-month, #next-month {
+  margin: 2px 0px 0px 6px;
+}
+
+#next-month {
+  margin-left: 162px;
 }
 
 .calendar_modern .calendar .nav i, .calendar_modern .calendar .nav b {
@@ -96,13 +107,16 @@
   float: left;
   width: 25px;
   height: 25px;
-  color: #757575;
   font-size: 13px;
   line-height: 25px;
   text-align: center;
   font-style: normal;
   background: white;
   text-decoration: none;
+}
+
+.calendar_modern .calendar .month .body .days b, .calendar_modern .calendar .month .body .days s, .calendar_modern .calendar .month .body .days a {
+  color: #757575;
 }
 
 .calendar_modern .calendar .month .body .days i.weekend, .calendar_modern .calendar .month .body .days b.weekend, .calendar_modern .calendar .month .body .days s.weekend, .calendar_modern .calendar .month .body .days a.weekend {
@@ -123,7 +137,7 @@
 }
 
 .calendar_modern .calendar .month .body .days b, .calendar_modern .calendar .month .body .days i, .calendar_modern .calendar .month .body .days s {
-  color: #9E9E9E;
+
 }
 
 .calendar_modern .calendar .month .body .days b, .calendar_modern .calendar .month .body .days s {

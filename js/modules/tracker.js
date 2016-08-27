@@ -2,7 +2,7 @@ var Tracker = function () {}
 
 Tracker.prototype.create = function(id) {
 
-	$("#dashboard").append("\
+	$("#time-trackers").append("\
 		<div data-theme='" + m.getDefaultSkin(13) + "' data-module='13' data-time='0' data-state='paused' data-id=" + id + " class='frame tracker open-module'>\
 			" + m.controllers + "\
 			<div class='content'>\
@@ -12,7 +12,7 @@ Tracker.prototype.create = function(id) {
 		</div>\
 	");
 
-	$(".tracker").last().draggable({ handle: '.controllers', containment: 'parent' }).css("position", "absolute");
+	$(".tracker").last().draggable({ handle: '.controllers', containment: '#dashboard' }).css("position", "absolute");
 	
 }
 

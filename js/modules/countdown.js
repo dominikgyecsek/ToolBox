@@ -27,8 +27,8 @@ Countdown.prototype.initialise = function(id) {
 		</div>\
 	";
 
-	$("#dashboard").append(DOM);
-	$(".countdown").last().draggable({ handle: '.controllers', containment: 'parent' }).css("position", "absolute");
+	$("#countdowns").append(DOM);
+	$(".countdown").last().draggable({ handle: '.controllers', containment: '#dashboard' }).css("position", "absolute");
 
 }
 

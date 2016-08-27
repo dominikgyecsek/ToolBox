@@ -65,8 +65,9 @@ $(document).ready(function() {
 	})
 
 	$("html").on("click", ".note-delete", function() {
-		var id = $("#modal-procede").attr("data-id")
-		var $frame = $(".sticky[data-id='" + id + "']");
+		var id = $("#modal-procede").attr("data-id");
+		var moduleId = $("#modal-procede").attr("data-module");
+		var $frame = $(".frame[data-id='" + id + "'][data-module='" + moduleId + "']");
 		m.close($frame.find(".close-module"), true)
 		$("#modal-wrapper").hide();
 	})

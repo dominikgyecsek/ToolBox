@@ -22,8 +22,8 @@ Timer.prototype.initialise = function(id) {
 		</div>\
 	";
 
-	$("#dashboard").append(DOM);
-	$(".timer").last().draggable({ handle: '.controllers', containment: 'parent' }).css("position", "absolute");
+	$("#timers").append(DOM);
+	$(".timer").last().draggable({ handle: '.controllers', containment: '#dashboard' }).css("position", "absolute");
 
 }
 

@@ -115,6 +115,10 @@ Modules.prototype.add = function(moduleId) {
 
 	}
 
+	console.log(moduleId);
+
+	if ( ( moduleId != 10 ) && ( moduleId != 16 ) ) $(".module-group[data-module='" + moduleId + "']").removeClass("hide");
+
 	$("#add-module").first().trigger("click");
 	$(".frame").css("z-index", "5");
 	$(".frame[data-id='" + loaded + "'][data-module='" + moduleId + "'").css("z-index", "6");
@@ -128,16 +132,20 @@ Modules.prototype.close = function(frame, confirmation) {
 
 	if ( moduleId ==  12) frame.parent().parent().find(".stop-timer").trigger("click");
 
-	if ( moduleId == 11 ) {
+	if ( (moduleId == 11) ||  (moduleId == 13) || (moduleId == 15) ) {
 		if (!confirmation) {
 			var id = frame.parent().parent().attr("data-id");
-			modal.show(0, id);
+			modal.show(moduleId, id);
 			return;
 		}
 	}
 
+	if ( moduleId ==  13) frame.parent().parent().find(".tracker-count").trigger("click");
+
 	this.loaded[moduleId] = this.loaded[moduleId] - 1;
 	$(frame).parent().parent().removeClass("open-module").addClass("close-module-anim");
+
+	if ( ( moduleId != 10 ) && ( moduleId != 16 ) && (this.loaded[moduleId] == 0) ) $(".module-group[data-module='" + moduleId + "']").addClass("hide");
 
 	setTimeout(function() {
 

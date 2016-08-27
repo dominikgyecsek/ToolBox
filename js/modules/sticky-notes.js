@@ -13,8 +13,8 @@ Sticky.prototype.initialise = function(id) {
 		</div>\
 	";
 
-	$("#dashboard").append(DOM);
-	$(".sticky").last().draggable({ handle: '.controllers', containment: 'parent' }).resizable().css("position", "absolute");
+	$("#sticky-notes").append(DOM);
+	$(".sticky").last().draggable({ handle: '.controllers', containment: '#dashboard' }).resizable().css("position", "absolute");
 
 }
 
