@@ -1,5 +1,5 @@
 .timer {
-	width: 250px;
+	width: 220px;
 	border-radius: 3px;
 	overflow: hidden;
 }
@@ -7,12 +7,7 @@
 .timer>.content {
 	padding: 5px 7px 5px 8px;
 	height: 120px;
-	height: 80px;
-}
-
-.timer .contenteditable {
-	outline: 0px solid transparent;
-	padding: 3px 7px 9px 7px;
+	height: 72px;
 }
 
 .timer-btn {
@@ -41,14 +36,13 @@
 .timer-remainder {
 	display: none;
 	position: absolute;
-	font-size: 26px;
 	padding: 4px 0px;
 	width: calc(100% - 15px);
 	text-align: center;
 }
 
 .timer-input {
-	width: 58px;
+	width: 43px;
 	margin: 3px 5px;
 	padding: 4px 8px;
 	border-radius: 4px;

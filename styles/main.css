@@ -318,11 +318,6 @@ input:focus {
 		max-height: 21px;
 	}
 
-	#dashboard {
-		top: 55px;
-		height: calc(100% - 55px);
-	}
-
 	.calculator .content, .calculator .controllers {
 		width: 200px;
 		margin: auto;
@@ -358,6 +353,10 @@ input:focus {
 
 	.big-hide.hide {
 		display: none;
+	}
+
+	.module-group {
+		display: block;
 	}
 
 }

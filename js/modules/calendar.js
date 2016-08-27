@@ -1,3 +1,5 @@
+$("#calendar").empty();
+
 (function() {
   var e, t;
   e = {
@@ -345,6 +347,7 @@
   }.call(this)
 
   setTimeout(function() {
+
     $(".cal").draggable({ handle: '.controllers', containment: '#dashboard' }).css("position", "absolute");
+    if ( m.loaded[16] != 0 ) $(".cal").show();
   }, 500);
-  

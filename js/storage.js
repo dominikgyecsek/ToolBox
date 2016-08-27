@@ -13,14 +13,16 @@ Storage.prototype.retrieve = function() {
 		console.log("LOAD");
 		
 		$("#dashboard").append(JSON.parse(localStorage.getItem("dashboard")));
-		$(".frame").draggable({ handle: '.controllers', containment: '#dashboard' }).css("position", "ab");
+		$(".frame").draggable({ handle: '.controllers', containment: '#dashboard' }).css("position", "absolute");
 		$(".sticky").resizable();
 		m.loaded = JSON.parse(localStorage.getItem("loaded"));
 		m.currentTheme = JSON.parse(localStorage.getItem("currentTheme"));
 		update.timeUpdates = JSON.parse(localStorage.getItem("timeUpdates"));
 		update.start();
 
-		//statrt
+		for (var key in m.loaded) {
+			if ( m.loaded[key] == m.limit[key] ) $(".module[data-module='" + key + "']").addClass("disabled");
+		}
 		
 	} else {
 

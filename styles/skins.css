@@ -2,7 +2,7 @@
 
 .sticky[data-theme="0"] { background-color: #FFF59D; color: #4a4a4a; }
 .sticky[data-theme="0"] .controllers i { color: #455A64; }
-.sticky[data-theme="1"] { background-color: #ea9c5c; color: #715c5c; }
+.sticky[data-theme="1"] { background-color: #FFB74D; color: #715c5c; }
 .sticky[data-theme="1"] .controllers i { color: #715c5c; }
 .sticky[data-theme="2"] { background-color: #424242; color: #EEEEEE; }
 .sticky[data-theme="2"] .controllers i { color: #EEEEEE; }

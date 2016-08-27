@@ -75,9 +75,11 @@ $(document).ready(function() {
 	/* Countdown */
 
 	$("html").on("click", ".start-stop-countdown", function() {
-		var $this = $(this).parent().parent().parent().parent();
-		if ( $this.attr("data-set") == "unset" ) countdown.start($this);
-		else countdown.stop($this);
+		countdown.start( $(this).parent().parent().parent().parent() );
+	})
+
+	$("html").on("click", ".countdown-edit", function() {
+		countdown.stop( $(this).parent().parent() );
 	})
 
 	/* Window */
@@ -102,7 +104,6 @@ $(document).ready(function() {
 		var state = $(this).attr("data-collapse");
 
 		if ( state == "open" ) {
-			console.log("CLOSE: " + module);
 			$(this).attr("data-collapse", "collapsed");
 			$(".frame[data-module='" + module + "']").hide();
 		} else {
@@ -110,6 +111,15 @@ $(document).ready(function() {
 			$(".frame[data-module='" + module + "']").show();			
 		}
 
+	})
+
+	$("html").on("keyup", ".tally-count", function() {
+
+		var $this = $(this);
+		var count = $this.text()
+
+		if ( isNaN(count) ) $this.text(0);
+	
 	})
 
 })

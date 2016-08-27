@@ -6,14 +6,14 @@ Timer.prototype.initialise = function(id) {
 		<div data-theme='" + m.getDefaultSkin(12) + "' data-module='12' data-state='paused' data-time='undefined' data-id=" + id + " class='frame timer open-module'>\
 			" + m.controllers + "\
 			<div class='content scrollbar-hide'>\
-				<div class='contenteditable' contenteditable='true' onclick='$(this).focus();'>" + this.randomCategory() + "</div>\
+				<div class='contenteditable title' contenteditable='true' onclick='$(this).focus();'>" + this.randomCategory() + "</div>\
 				<span class='big-hide-opacity'>\
 					<button class='stop-timer timer-btn'>Stop</button>\
 				</span>\
-				<div class='timer-remainder'></div>\
+				<div class='timer-remainder info'></div>\
 				<div class='timer-picker'>\
 					<input type='text' class='timer-input timer-hour' placeholder='hour'>\
-					<input type='text' class='timer-input timer-minute' placeholder='minute'>\
+					<input type='text' class='timer-input timer-minute' placeholder='min'>\
 				</div>\
 				<span class='big-hide-opacity'>\
 					<button class='start-pause-timer timer-btn'>Start</button>\

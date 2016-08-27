@@ -45,26 +45,20 @@
 	margin: 3px;
 }
 
-.countdown .contenteditable {
-	outline: 0px solid transparent;
-	padding: 3px 7px 2px 6px;
-}
-
 .countdown-remaning {
 	display: none;
 	margin-bottom: 10px;
 }
 
 .countdown-date {
-	text-align: center;
 	margin-bottom: 8px;
 }
 
-.countdown-day-remaining {
-	text-align: center;
-	font-size: 22px;
+.countdown:hover .countdown-controllers {
+	height: 31px;
 }
 
-.countdown:hover .countdown-controllers {
-	height: 29px;
+.countdown-edit {
+	padding: 2px 2px 3px 0px;
+	display: none;
 }

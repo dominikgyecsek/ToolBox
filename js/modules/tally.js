@@ -6,8 +6,8 @@ Tally.prototype.create = function(id) {
 		<div data-theme='" + m.getDefaultSkin(15) + "' data-module='15' data-id=" + id + " class='frame tally open-module'>\
 			" + m.controllers + "\
 			<div class='content'>\
-				<div class='contenteditable' contenteditable='true' onclick='$(this).focus();'>" +  tally.randomCategory() + "</div>\
-				<span class='tally-count'> 0 </span>\
+				<div class='contenteditable title' contenteditable='true' onclick='$(this).focus();'>" +  tally.randomCategory() + "</div>\
+				<span class='info tally-count contenteditable' contenteditable='true' onclick='$(this).focus();'> 0 </span>\
 				<span class='big-hide-opacity'><button class='tally-btn tally-dec left'> <i class='material-icons'>remove</i> </button>\
 				<button class='tally-btn tally-inc right'> <i class='material-icons'>add</i> </button></span>\
 			</div>\

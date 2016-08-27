@@ -158,6 +158,7 @@ b {
 
 .cal {
   display: none;
+  margin-top: 20px;
 }
 
 .cal .controllers {
@@ -170,4 +171,3 @@ b {
 
 .cal:hover .viewport {
   border-radius: 0px;
-}

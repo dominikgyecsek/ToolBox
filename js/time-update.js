@@ -28,6 +28,7 @@ TimeUpdate.prototype.increase = function() {
 
 	for (var i = 0; i < update.timeUpdates.length; i++) {
 		var row = update.timeUpdates[i];
+		console.log(row);
 		var module = row[0];
 
 		if (module == 1) {

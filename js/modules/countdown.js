@@ -8,15 +8,15 @@ Countdown.prototype.initialise = function(id) {
 		<div data-set='unset' data-theme='" + m.getDefaultSkin(14) + "' data-module='14' data-time='undefined' data-id=" + id + " class='frame countdown open-module'>\
 			" + m.controllers + "\
 			<div class='content scrollbar-hide'>\
-				<div class='contenteditable' contenteditable='true' onclick='$(this).focus();'>" + this.randomCategory() + "</div>\
+				<div class='contenteditable title' contenteditable='true' onclick='$(this).focus();'>" + this.randomCategory() + "</div>\
 				<div class='countdown-picker'>\
 					<input type='text' class='countdown-input countdown-year' placeholder='year' value='" + date.getFullYear() + "'>\
 					<input type='text' class='countdown-input countdown-month' placeholder='month' value='" + eval( date.getMonth() + 1 ) + "'>\
 					<input type='text' class='countdown-input countdown-day' placeholder='day' value='" + date.getDate() + "'>\
 				</div>\
 				<div class='countdown-remaining'>\
-					<div class='countdown-day-remaining'></div>\
-					<div class='countdown-date'></div>\
+					<div class='countdown-day-remaining info'></div>\
+					<div class='countdown-date info-secondary'></div>\
 				</div>\
 					<div class='countdown-controllers'>\
 						<span class='big-hide-height'>\
@@ -29,6 +29,7 @@ Countdown.prototype.initialise = function(id) {
 
 	$("#countdowns").append(DOM);
 	$(".countdown").last().draggable({ handle: '.controllers', containment: '#dashboard' }).css("position", "absolute");
+	$(".countdown").last().find(".controllers").append('<span class="countdown-edit"><i class="material-icons">mode_edit</i></span>')
 
 }
 
@@ -55,6 +56,7 @@ Countdown.prototype.start = function($frame) {
 	if ( this.validate(date) ) {
 
 		var days = this.difference(date)
+		$frame.find(".countdown-edit").show();
 		
 		if (days != false) {
 
@@ -71,6 +73,8 @@ Countdown.prototype.start = function($frame) {
 			$frame.find(".countdown-picker").hide();
 			$frame.find(".start-stop-countdown").text("Stop");
 			this.update(id, days, prettyDate);
+			$frame.find(".countdown-controllers").hide();
+			
 
 		} else {
 
@@ -122,6 +126,8 @@ Countdown.prototype.stop = function($frame) {
 	$frame.find(".countdown-picker").show();
 	$frame.find(".countdown-day-remaining, .countdown-date").text("");
 	$frame.find(".start-stop-countdown").text("Start");
+	$frame.find(".countdown-controllers").show();
+	$frame.find(".countdown-edit").hide();
 
 }
 

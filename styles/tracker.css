@@ -3,11 +3,6 @@
 	width: 220px;
 }
 
-.tracker .contenteditable {
-	outline: 0px solid transparent;
-	padding: 3px 7px 2px 6px;
-}
-
 .tracker .content {
 	padding: 4px;
 }

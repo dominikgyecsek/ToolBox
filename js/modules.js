@@ -142,7 +142,16 @@ Modules.prototype.close = function(frame, confirmation) {
 		}
 	}
 
-	if ( moduleId ==  13) frame.parent().parent().find(".tracker-count").trigger("click");
+	if ( moduleId ==  13) {
+		var id = frame.parent().parent().attr("data-id");
+		for (var i = 0; i < update.timeUpdates.length; i++) {
+			var row = update.timeUpdates[i];
+			if ( ( row[0] == 3 ) && ( row[1] == id ) ) {
+				update.timeUpdates.splice(i, 1);
+				break;
+			}
+		}
+	}
 
 	this.loaded[moduleId] = this.loaded[moduleId] - 1;
 	$(frame).parent().parent().removeClass("open-module").addClass("close-module-anim");

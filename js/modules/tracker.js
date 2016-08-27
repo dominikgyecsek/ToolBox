@@ -6,8 +6,8 @@ Tracker.prototype.create = function(id) {
 		<div data-theme='" + m.getDefaultSkin(13) + "' data-module='13' data-time='0' data-state='paused' data-id=" + id + " class='frame tracker open-module'>\
 			" + m.controllers + "\
 			<div class='content'>\
-				<div class='contenteditable' contenteditable='true' onclick='$(this).focus();'>" + this.randomCategory() + "</div>\
-				<span class='tracker-count'> 0 days 00:00:00</span>\
+				<div class='contenteditable title' contenteditable='true' onclick='$(this).focus();'>" + this.randomCategory() + "</div>\
+				<span class='tracker-count info'> 0 days 00:00:00</span>\
 			</div>\
 		</div>\
 	");
