@@ -72,3 +72,10 @@
 .contenteditable {
 	text-align: center;
 }
+
+.module-group {
+    margin: 15px 15px 10px 15px;
+    padding: 2px 4px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 4px 0px #737373;
+}

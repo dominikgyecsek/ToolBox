@@ -288,6 +288,10 @@ input:focus {
 	overflow: hidden;
 }
 
+.big-hide {
+	display: none;
+}
+
 .frame:hover .big-hide-opacity {
 	opacity: 1;
 }
@@ -346,6 +350,14 @@ input:focus {
 
 	.big-hide-height {
 		height: auto;
+	}
+
+	.big-hide {
+		display: inline-block;
+	}
+
+	.big-hide.hide {
+		display: none;
 	}
 
 }
