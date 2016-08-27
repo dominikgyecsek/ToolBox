@@ -244,6 +244,7 @@ input:focus {
 
 #modal {
 	width: 300px;
+	max-width: 100%;
 	background-color: white;
 	border-radius: 3px;
 	padding: 16px;

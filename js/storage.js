@@ -46,7 +46,7 @@ Storage.prototype.retrieve = function() {
 			</div>\
 		')
 
-		console.log("EMPTY");
+		recalculateCalendar();
 
 	}
 
@@ -55,11 +55,11 @@ Storage.prototype.retrieve = function() {
 Storage.prototype.save = function() {
 
 	var dashboard = $("#dashboard").html();
-
 	localStorage.setItem("dashboard", JSON.stringify(dashboard));
 	localStorage.setItem("loaded", JSON.stringify(m.loaded));
 	localStorage.setItem("currentTheme", JSON.stringify(m.currentTheme));
 	localStorage.setItem("timeUpdates", JSON.stringify(update.timeUpdates));
+	//alert("SAVED");
 
 }
 

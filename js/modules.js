@@ -21,11 +21,11 @@ var Modules = function() {
 
 	this.limit = {
 		10: 1,
-		11: 30,
-		12: 10,
-		13: 30,
-		14: 30,
-		15: 30,
+		11: 100,
+		12: 100,
+		13: 100,
+		14: 100,
+		15: 100,
 		16: 1
 	}
 
@@ -80,13 +80,20 @@ Modules.prototype.add = function(moduleId) {
 	var loaded = this.loaded[moduleId];
 	var limit = this.limit[moduleId];
 
-	if ( limit == loaded ) {
-		return;
-	} else if ( limit == loaded + 1) {
-		$(".module[data-module='" + moduleId + "']").addClass("disabled");
-	}
+	if ( limit == loaded ) return;
+	else if ( limit == loaded + 1) $(".module[data-module='" + moduleId + "']").addClass("disabled");
 
 	this.loaded[moduleId] = loaded + 1;
+
+	if ( (moduleId != 10) && (moduleId != 16) ) {
+		for (var i = 0; i < 100; i++) {
+			if ( $(".frame[data-id='" + i + "'][data-module='" + moduleId + "']").length == 0 ) {
+				console.log("FOUND A HOLE AT " + i);
+				loaded = i;
+				break;
+			}
+		}
+	}
 
 	switch (moduleId) {
 

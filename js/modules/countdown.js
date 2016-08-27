@@ -161,6 +161,11 @@ Countdown.prototype.validate = function(date) {
     var month = parseInt(parts[0], 10);
     var year = parseInt(parts[2], 10);
 
+    // Check if its before today
+	var now = new Date();
+	var will = new Date(date);
+	if ( will <= now ) return false;
+
     // Check the ranges of month and year
     if(year < 1000 || year > 3000 || month == 0 || month > 12)
         return false;
