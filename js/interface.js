@@ -2,9 +2,9 @@ var Interface = function() {}
 
 Interface.prototype.openMenu = function() {
 
-	if ( $("aside").hasClass("close") ) {
+	if ( $("#aside").hasClass("close") ) {
 
-		$("aside").removeClass("close").addClass("open");
+		$("#aside").removeClass("close").addClass("open");
 		$("#aside-close").show();
 		$("nav").addClass("open");
 		$("#hamburger-1").removeClass("hamburger-1-open").addClass("hamburger-1-close");
@@ -13,7 +13,7 @@ Interface.prototype.openMenu = function() {
 
 	} else {
 
-		$("aside").removeClass("open").addClass("close");
+		$("#aside").removeClass("open").addClass("close");
 		$("#aside-close").hide();
 		$("nav").removeClass("open");
 		$("#hamburger-1").removeClass("hamburger-1-close").addClass("hamburger-1-open");

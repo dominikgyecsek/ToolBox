@@ -142,11 +142,7 @@ button {
 	padding: 0px;
 }
 
-button:focus {
-	outline: 0;
-}
-
-input:focus {
+button:focus, input:focus {
 	outline: 0;
 }
 
